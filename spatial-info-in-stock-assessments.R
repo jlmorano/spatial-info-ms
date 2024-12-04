@@ -2,7 +2,7 @@
 ######################################
 # Janelle L. Morano
 
-# Use NJ Ocean Trawl survey data and create a dataset for annual estimation in sdmTMB
+# Quantify spatial information in US marine stocks
 
 # last updated 5 November 2024
 ###############################################
@@ -21,7 +21,7 @@ si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/US Marine Fisheries Sto
 si <- si[1:357,1:17]
 
 # Add column to indicate if stock used spatial info in any step, model, or other
-si <- si %>%
+si <- si |>
   mutate(Use = case_when(SI.other == 1 ~ 3,
                          SI.model == 1 ~ 2,
                          SI.stock.boundaries == 1 | SI.data.prep == 1 | SI.sci.advice == 1 ~ 1,
@@ -32,18 +32,18 @@ si <- si %>%
 metrics <- data.frame("Summary" = c("Species.with.Assessments", "Multispecies.Stocks", "Species.with.Multiple.Assessments", "Total.Stocks", "Total.Assessments"), "Total")
 
 # Species with Assessments
-metrics[1, 2] <- tally(si %>% count(si$Common.Name))
+metrics[1, 2] <- tally(si |> count(si$Common.Name))
 
 # Multispecies Complexes
-q <- si %>% count(si$Common.Name == "Multispecies Complex")
+q <- si |> count(si$Common.Name == "Multispecies Complex")
 metrics[2, 2] <- q[2,2]
 
 # Species with more than one Assessment
-assessments <- si %>% count(si$Scientific.Name)
+assessments <- si |> count(si$Scientific.Name)
 metrics[3, 2] <- sum(assessments$n > 1)
 
 # Total number of Stocks
-metrics[4, 2] <- tally(si %>% count(si$Scientific.Name))
+metrics[4, 2] <- tally(si |> count(si$Scientific.Name))
 
 # Total number of Assessments
 metrics[5, 2] <- nrow(si)
@@ -52,23 +52,23 @@ print(metrics)
 
 
 # Total number of stocks in rebuilding
-df <- si %>% group_by(Council.Abbv) %>%
+df <- si |> group_by(Council.Abbv) |>
   count(si$Rebuilding.Program.Status)
 print(df, n = 25)
 
 
 
 #######----- Waffle plot of stocks with spatial info, by region
-si.waffle <- si %>%
-  group_by(Council.Abbv) %>%
+si.waffle <- si |>
+  group_by(Council.Abbv) |>
   summarise(no.si = sum(Use == 0, na.rm = TRUE),
             yes.si = sum(Use == 1, na.rm = TRUE),
             model.si = sum(Use == 2, na.rm = TRUE),
             other.si = sum(Use == 3, na.rm = TRUE))
-si.waffle.l <- si.waffle %>%
+si.waffle.l <- si.waffle |>
   pivot_longer(cols = no.si: other.si,
                names_to = c("Use"),
-               values_to = "Count") %>%
+               values_to = "Count") |>
   mutate(Use = factor(Use, levels=c("no.si", "yes.si", "model.si", "other.si")))
             
 library(waffle)
@@ -172,6 +172,8 @@ ggplot(data = subset(si.waffle.l, Council.Abbv %in% c("WPFMC")), aes(fill = Use,
   coord_equal() +
   theme_void() +
   ggtitle("WPFMC")
+
+
 
 #######----- By Assessment Step 
 #----- National trends
