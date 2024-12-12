@@ -4,7 +4,7 @@
 
 # Quantify spatial information in US marine stocks
 
-# last updated 5 November 2024
+# last updated 12 December 2024
 ###############################################
 ###############################################
 
@@ -14,11 +14,9 @@ library(cowplot)
 
 
 
-si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/US Marine Fisheries Stocks and Assessments.csv", header = TRUE)
+si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/US Marine Fisheries Stocks and Assessments_20241212.csv", header = TRUE)
 # colnames(si)
-# Double-check, but NAs appear starting row 358 and should be removed
-# si <- si[rowSums(is.na(si)) != ncol(si), ] #won't work because character columns with blanks
-si <- si[1:357,1:17]
+
 
 # Add column to indicate if stock used spatial info in any step, model, or other
 si <- si |>
@@ -73,6 +71,8 @@ si.waffle.l <- si.waffle |>
             
 library(waffle)
 
+unique(si$Council.Abbv)
+
 ggplot(data = subset(si.waffle.l, Council.Abbv %in% c("CFMC")), aes(fill = Use, values = Count)) +
   geom_waffle(n_rows = 4) +
   scale_fill_manual(name = NULL,
@@ -118,6 +118,16 @@ ggplot(data = subset(si.waffle.l, Council.Abbv %in% c("NEFMC")), aes(fill = Use,
   coord_equal() +
   theme_void() +
   ggtitle("NEFMC")
+
+
+ggplot(data = subset(si.waffle.l, Council.Abbv %in% c("NEFMC-MAFMC")), aes(fill = Use, values = Count)) +
+  geom_waffle(n_rows = 4) +
+  scale_fill_manual(name = NULL,
+                    values = c("#FFE9CE", "#97D8C4", "#F4B942","#6B9AC4"),
+                    labels = c("No", "Yes", "Model", "Other")) +
+  coord_equal() +
+  theme_void() +
+  ggtitle("NEFMC-MAFMC")
 
 ggplot(data = subset(si.waffle.l, Council.Abbv %in% c("NOAA HMS, ICCAT")), aes(fill = Use, values = Count)) +
   geom_waffle(n_rows = 4) +
@@ -210,13 +220,16 @@ si.national.stack <- si.national %>%
   mutate(Response = factor(Response, levels=c("Y", "N", "NA")))
 
 # Graph National trends
+cols <- c("#0571B0", "#CA0020","grey90") # "#F7F7F7"
 ggplot(data = si.national.stack, aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
+  theme(text = element_text(size = 14)) +
   ggtitle("National")
 
 
@@ -257,157 +270,195 @@ si.council.stack <- si.council %>%
   
 
 # Graph by Region
+
+#Tried a loop but I'm off my game
+# names <- unique(si.council.stack$Council.Abbv)
+# parts <- LETTERS[1:length(unique(si.council.stack$Council.Abbv))]
+# junk <- c()
+# #Use cols from national graph above
+# for (z in names) {
+#   for (y in parts) {
+#      junk[1] <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c(z)), aes(x = Step, y = Total, fill = Response)) +
+#     geom_bar(stat = "identity") +
+#     # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+#     scale_fill_manual(values = cols) +
+#     theme(axis.text.x = element_blank()) +
+#     theme(panel.background = element_blank()) +
+#     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
+#     theme(axis.line = element_line(colour = "black")) +
+#     theme(axis.title.x = element_blank()) +
+#     theme(text = element_text(size = 14)) +
+#     ylim(0, 100) +
+#     ggtitle(z) +
+#     theme(legend.position = "none") 
+#   }
+# }
+  
+  
 a <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("CFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("CFMC") +
   theme(legend.position = "none") 
 
 b <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("GMFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("GMFMC") +
   theme(legend.position = "none")
 
 c <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("GMFMC-SAFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("GMFMC-SAFMC") +
   theme(legend.position = "none")
 
 d <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("MAFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("MAFMC") +
   theme(legend.position = "none")
 
 e <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NEFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("NEFMC") +
   theme(legend.position = "none")
 
 f <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NEFMC-MAFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("NEFMC-MAFMC") +
   theme(legend.position = "none")
 
-g <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NOAA")), aes(x = Step, y = Total, fill = Response)) +
+g <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NOAA HMS, ICCAT")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
-  ggtitle("NOAA") +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
+  ggtitle("ICCAT") +
   theme(legend.position = "none")
 
-h <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NOAA HMS, ICCAT")), aes(x = Step, y = Total, fill = Response)) +
-  geom_bar(stat = "identity") +
-  # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
-  theme(axis.text.x = element_blank()) +
-  theme(panel.background = element_blank()) +
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
-  theme(axis.line = element_line(colour = "black")) +
-  theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
-  ggtitle("NOAA HMS, ICCAT") +
-  theme(legend.position = "none")
 
-i <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NPFMC")), aes(x = Step, y = Total, fill = Response)) +
+h <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NPFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
   # theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_blank()) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("NPFMC") +
   theme(legend.position = "none")
 
-j <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("PFMC")), aes(x = Step, y = Total, fill = Response)) +
+i <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("PFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("PFMC") +
   theme(legend.position = "none")
 
-k <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("PFMC-WPFMC")), aes(x = Step, y = Total, fill = Response)) +
+j <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("PFMC-WPFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("PFMC-WPFMC") + #ITTAC
   theme(legend.position = "none")
 
-l <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("SAFMC")), aes(x = Step, y = Total, fill = Response)) +
+k <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("SAFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("SAFMC") +
   theme(legend.position = "none")
 
-m <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("WPFMC")), aes(x = Step, y = Total, fill = Response)) +
+l <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("WPFMC")), aes(x = Step, y = Total, fill = Response)) +
   geom_bar(stat = "identity") +
+  scale_fill_manual(values = cols) +
   theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
   theme(panel.background = element_blank()) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
-  ylim(0, 100) +
+  theme(text = element_text(size = 14)) +
+  ylim(0, 75) +
   ggtitle("WPFMC")+
   theme(legend.position = "none")
 
 
-plot_grid(a, b, c, d, e, f, h, i, j, k, l, m, ncol = 4, nrow = 3) #left out g
+plot_grid(a, b, c, d, e, f, g, h, i, j, k, l, ncol = 4, nrow = 3) 
