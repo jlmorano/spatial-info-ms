@@ -14,7 +14,7 @@ library(cowplot)
 
 
 
-si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/US Marine Fisheries Stocks and Assessments_20241212.csv", header = TRUE)
+si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/US Marine Fisheries Stocks and Assessments_20241212.csv", header = TRUE, na.strings = c(""))
 # colnames(si)
 
 
