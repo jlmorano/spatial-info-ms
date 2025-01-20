@@ -1,10 +1,12 @@
-# spatial-info-in-stock-assessments.R
+# summary-spatial-info-in-stock-assessments.R
 ######################################
 # Janelle L. Morano
 
 # Quantify spatial information in US marine stocks
+# Generate information for tables and figures illustrating characteristics
+# of species in the assessment database
 
-# last updated 12 December 2024
+# last updated 20 January 2025
 ###############################################
 ###############################################
 
@@ -13,10 +15,41 @@ library(janitor)
 library(cowplot)
 
 
+#----- Data Preparation
+si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/US Marine Fisheries Stocks and Assessments-Analysis_20250116.csv", header = TRUE, na.strings = c(""))
+str(si)
+colnames(si)
+# [1] "Common.Name"                  "Scientific.Name"              "Asmt.Year"                   
+# [4] "Stock.Assessment.Area"        "Stock.Status.Area"            "Council"                     
+# [7] "Council.Abbv"                 "FMP"                          "Assessment.Model"            
+# [10] "Assessment.Model.Type"        "Science.Center.Region"        "Rebuilding.Program.Status"   
+# [13] "SI.stock.boundaries"          "SI.data.prep"                 "SI.model"                    
+# [16] "SI.sci.advice"                "SI.other"                     "NOAA.Region.Name"            
+# [19] "NMFS.Name"                    "Ave.Metric.Tons_Commercial"   "Ave.Metric.Tons_Recreational"
+# [22] "Ave.Dollars.Adj_Commercial"   "Ecological"                   "Schooling"                   
+# [25] "Max.Length.m"                 "Transboundary"    
 
-si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/US Marine Fisheries Stocks and Assessments_20241212.csv", header = TRUE, na.strings = c(""))
-# colnames(si)
+si$Assessment.Model.Type <- as.numeric(si$Assessment.Model.Type)
+si$Rebuilding.Program.Status <- as.numeric(si$Rebuilding.Program.Status)
+si$SI.stock.boundaries <- as.numeric(si$SI.stock.boundaries)
+si$SI.data.prep <- as.numeric(si$SI.data.prep)
+si$SI.model <- as.numeric(si$SI.sci.advice)
+si$SI.other <- as.numeric(si$SI.other)
+si$Ave.Metric.Tons_Commercial <- as.numeric(si$Ave.Metric.Tons_Commercial)
+si$Ave.Metric.Tons_Recreational <- as.numeric(si$Ave.Metric.Tons_Recreational)
+si$Ave.Dollars.Adj_Commercial <- as.numeric(si$Ave.Dollars.Adj_Commercial)
+si$Schooling <- as.numeric(si$Schooling)
+si$Max.Length.m <- as.numeric(si$Max.Length.m)
+si$Transboundary <- as.numeric(si$Transboundary)
+si$Fisheries.Dep.Only <- as.numeric(si$Fisheries.Dep.Only)
+si$Fisheries.Ind <- as.numeric(si$Fisheries.Ind)
 
+# Convert Ave.Dollars.Adj_Commercial to price per ton
+si$PerTon_Ave.Dollars.Adj_Commercial <- si$Ave.Dollars.Adj_Commercial/si$Ave.Metric.Tons_Commercial
+si[sapply(si, is.infinite)] <- 0
+
+# Omit Nassau grouper, because it's ESA listed and not assessed
+si <- si[!(si$Common.Name %in% "Nassau grouper"),]
 
 # Add column to indicate if stock used spatial info in any step, model, or other
 si <- si |>
@@ -27,7 +60,7 @@ si <- si |>
 
 
 #----- Overall stats
-metrics <- data.frame("Summary" = c("Species.with.Assessments", "Multispecies.Stocks", "Species.with.Multiple.Assessments", "Total.Stocks", "Total.Assessments"), "Total")
+metrics <- data.frame("Summary" = c("Species.with.Assessments", "Multispecies.Stocks", "Species.with.Multiple.Assessments", "Total.Assessments"), "Total" = 0)
 
 # Species with Assessments
 metrics[1, 2] <- tally(si |> count(si$Common.Name))
@@ -40,19 +73,52 @@ metrics[2, 2] <- q[2,2]
 assessments <- si |> count(si$Scientific.Name)
 metrics[3, 2] <- sum(assessments$n > 1)
 
-# Total number of Stocks
-metrics[4, 2] <- tally(si |> count(si$Scientific.Name))
-
 # Total number of Assessments
-metrics[5, 2] <- nrow(si)
+metrics[4, 2] <- nrow(si)
 
 print(metrics)
 
 
-# Total number of stocks in rebuilding
-df <- si |> group_by(Council.Abbv) |>
-  count(si$Rebuilding.Program.Status)
-print(df, n = 25)
+
+#----- Stock Characteristics by Councils
+by.council <- si %>%
+  group_by(Council.Abbv) %>%
+  summarize(n = n(),
+            boundaries.Y = sum(SI.stock.boundaries == 1, na.rm = TRUE),
+            dataprep.Y = sum(SI.data.prep == 1, na.rm = TRUE),
+            model.Y = sum(SI.model == 1, na.rm = TRUE),
+            sciadv.Y = sum(SI.sci.advice == 1, na.rm = TRUE),
+            other.Y = sum(SI.other == 1, na.rm = TRUE),
+            rebuild.Y = sum(Rebuilding.Program.Status == 1, na.rm = TRUE),
+            Ave.Metric.Tons_Commercial = mean(Ave.Metric.Tons_Commercial, na.rm = TRUE),
+            Ave.Metric.Tons_Recreational = mean(Ave.Metric.Tons_Recreational, na.rm = TRUE),
+            Ave.Dollars.Adj_Commercial = mean(Ave.Dollars.Adj_Commercial, na.rm = TRUE),
+            PerTon_Ave.Dollars.Adj_Commercial = mean(PerTon_Ave.Dollars.Adj_Commercial, na.rm = TRUE),
+            Eco.Bathy = sum(Ecological == "bathydemersal"),
+            Eco.BenthPlank = sum(Ecological == "demersal/benthic, planktivorous"),
+            Eco.BenthPisc = sum(Ecological == "demersal/benthic, piscivorous/omnivorous"),
+            Eco.PelagBenthPlank = sum(Ecological == "benthopelagic, planktivorous"),
+            Eco.PelagBenthPisc = sum(Ecological == "benthopelagic, piscivorous/omnivorous"),
+            Eco.PelagOceanPisc = sum(Ecological == "pelagic-oceanic, piscivorous/omnivorous"),
+            Eco.PelagNeritPlank = sum(Ecological == "pelagic-neritic, planktivorous"),
+            Eco.PelagNeritPisc = sum(Ecological == "pelagic-neritic, piscivorous/omnivorous"),
+            Eco.Reef = sum(Ecological == "reef-associated, piscivorous/omnivorous"),
+            Schooling = sum(Schooling == 1, na.rm = TRUE),
+            Transboundary = sum(Transboundary == 1, na.rm = TRUE),
+            MaxSize = mean(Max.Length.m, na.rm = TRUE)
+            )
+
+print(by.council)
+
+
+#----- Landings & Value Stats
+Comm.landings <- si |>
+  select(c(Common.Name, Scientific.Name, Council.Abbv, Ave.Metric.Tons_Commercial)) |>
+  na.omit() |>
+  arrange(desc(Ave.Metric.Tons_Commercial))
+Comm.landings <- distinct(Comm.landings)
+
+
 
 
 
@@ -305,7 +371,6 @@ a <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("CFMC")), aes(x 
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("CFMC") +
   theme(legend.position = "none") 
 
@@ -319,7 +384,6 @@ b <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("GMFMC")), aes(x
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("GMFMC") +
   theme(legend.position = "none")
 
@@ -333,7 +397,6 @@ c <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("GMFMC-SAFMC")),
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("GMFMC-SAFMC") +
   theme(legend.position = "none")
 
@@ -347,7 +410,6 @@ d <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("MAFMC")), aes(x
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("MAFMC") +
   theme(legend.position = "none")
 
@@ -361,7 +423,6 @@ e <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NEFMC")), aes(x
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("NEFMC") +
   theme(legend.position = "none")
 
@@ -375,7 +436,6 @@ f <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NEFMC-MAFMC")),
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("NEFMC-MAFMC") +
   theme(legend.position = "none")
 
@@ -389,7 +449,6 @@ g <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NOAA HMS, ICCAT
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("ICCAT") +
   theme(legend.position = "none")
 
@@ -404,7 +463,6 @@ h <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("NPFMC")), aes(x
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("NPFMC") +
   theme(legend.position = "none")
 
@@ -417,7 +475,6 @@ i <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("PFMC")), aes(x 
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("PFMC") +
   theme(legend.position = "none")
 
@@ -430,7 +487,6 @@ j <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("PFMC-WPFMC")), 
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("PFMC-WPFMC") + #ITTAC
   theme(legend.position = "none")
 
@@ -443,7 +499,6 @@ k <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("SAFMC")), aes(x
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("SAFMC") +
   theme(legend.position = "none")
 
@@ -456,9 +511,10 @@ l <- ggplot(data = subset(si.council.stack, Council.Abbv %in% c("WPFMC")), aes(x
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
-  ylim(0, 75) +
   ggtitle("WPFMC")+
   theme(legend.position = "none")
 
 
 plot_grid(a, b, c, d, e, f, g, h, i, j, k, l, ncol = 4, nrow = 3) 
+
+

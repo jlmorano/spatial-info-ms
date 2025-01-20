@@ -1,0 +1,359 @@
+"","Entity.Name","Fisheries.Dep.Only","Fisheries.Ind"
+"1","Acadian redfish - Gulf of Maine / Georges Bank",0,1
+"2","Alaska plaice - Bering Sea / Aleutian Islands",0,1
+"3","Alaska skate - Bering Sea / Aleutian Islands",0,1
+"4","Albacore - North Atlantic",1,0
+"5","Albacore - North Pacific",1,0
+"6","Albacore - South Pacific",1,0
+"7","Aleutian Islands Blackspotted and Rougheye rockfish Complex | Asmt",0,1
+"8","American Samoa Bottomfish Multi-species Complex",1,0
+"9","American plaice - Gulf of Maine / Georges Bank",0,1
+"10","Arrowtooth flounder - Bering Sea / Aleutian Islands",0,1
+"11","Arrowtooth flounder - Gulf of Alaska",0,1
+"12","Arrowtooth flounder - Pacific Coast",0,1
+"13","Atka mackerel - Aleutian Islands",0,1
+"14","Atka mackerel - Bering Sea / Aleutian Islands",0,1
+"15","Atlantic Small Coastal Shark Complex",0,1
+"16","Atlantic cod - Eastern Georges Bank | Asmt",0,1
+"17","Atlantic cod - Georges Bank",0,1
+"18","Atlantic cod - Gulf of Maine",0,1
+"19","Atlantic halibut - Northwestern Atlantic Coast",0,1
+"20","Atlantic herring - Northwestern Atlantic Coast",0,1
+"21","Atlantic mackerel - Gulf of Maine / Cape Hatteras",0,1
+"22","Atlantic menhaden - Atlantic Coast | Asmt & Status",0,1
+"23","Atlantic sharpnose shark - Atlantic",0,1
+"24","Atlantic sharpnose shark - Atlantic and Gulf of Mexico",0,1
+"25","Atlantic surfclam - Mid-Atlantic Coast",0,1
+"26","Atlantic wolffish - Gulf of Maine / Georges Bank",0,1
+"27","Aurora rockfish - Pacific Coast",0,1
+"28","Bank rockfish - California",1,0
+"29","Barndoor skate - Georges Bank / Southern New England | Asmt & Status",0,1
+"30","Bering Sea / Aleutian Islands Blackspotted and Rougheye Rockfish Complex",0,1
+"31","Bering Sea / Aleutian Islands Other Flatfish Complex",0,1
+"32","Bering Sea / Aleutian Islands Other Rockfish Complex",0,1
+"33","Bering Sea / Aleutian Islands Other Skates Complex",0,1
+"34","Bering Sea / Aleutian Islands Sculpin Complex",0,1
+"35","Bering Sea / Aleutian Islands Skate Complex",0,1
+"36","Big skate - Gulf of Alaska",0,1
+"37","Big skate - Pacific Coast",0,1
+"38","Bigeye bream - Guam | Asmt",1,1
+"39","Bigeye bream - Main Hawaiian Islands",1,1
+"40","Bigeye thresher - Pacific",1,0
+"41","Bigeye tuna - Atlantic",1,1
+"42","Bigeye tuna - Eastern Pacific",1,0
+"43","Bigscale soldierfish - Main Hawaiian Islands",1,1
+"44","Black grouper - Southern Atlantic Coast / Gulf of Mexico",1,1
+"45","Black rockfish - California",1,0
+"46","Black rockfish - Northern Pacific Coast",0,1
+"47","Black rockfish - Oregon | Asmt & Status",1,1
+"48","Black rockfish - Southern Pacific Coast",1,1
+"49","Black rockfish - Washington",1,0
+"50","Black sea bass - Mid-Atlantic Coast",0,1
+"51","Black sea bass - Southern Atlantic Coast",1,1
+"52","Black-and-yellow rockfish - Pacific Coast",1,0
+"53","Blackgill rockfish - Northern Pacific Coast",1,0
+"54","Blackgill rockfish - Southern California",0,1
+"55","Blacknose shark - Atlantic",1,1
+"56","Blacknose shark - Gulf of Mexico",0,1
+"57","Blacktail snapper - Guam | Asmt",1,1
+"58","Blacktail snapper - Main Hawaiian Islands",1,1
+"59","Blacktip shark - Atlantic",1,1
+"60","Blacktip shark - Gulf of Mexico",1,1
+"61","Blue goatfish - Main Hawaiian Islands",1,1
+"62","Blue king crab - Pribilof Islands",0,1
+"63","Blue king crab - Saint Matthew Island",0,1
+"64","Blue marlin - Atlantic",1,0
+"65","Blue marlin - Pacific",1,0
+"66","Blue rockfish - California",1,1
+"67","Blue rockfish - Northern Pacific Coast",1,0
+"68","Blue rockfish - Southern California",1,0
+"69","Blue shark - North Atlantic",1,0
+"70","Blue shark - North Pacific",1,0
+"71","Bluefin trevally - Guam | Asmt",1,0
+"72","Bluefin trevally - Main Hawaiian Islands",1,1
+"73","Bluefin tuna - Western Atlantic",1,1
+"74","Bluefish - Atlantic Coast",0,1
+"75","Blueline tilefish - Southern Atlantic Coast | Status & ACL",1,0
+"76","Bluespine unicornfish - Guam | Asmt",1,1
+"77","Bluespine unicornfish - Main Hawaiian Islands",1,1
+"78","Bocaccio - Northern Pacific Coast",1,0
+"79","Bocaccio - Southern Pacific Coast",1,1
+"80","Bronzespotted rockfish - Pacific Coast",1,0
+"81","Brown rockfish - Pacific Coast",1,0
+"82","Bullethead parrotfish - Main Hawaiian Islands | Asmt",1,1
+"83","Butterfish - Gulf of Maine / Cape Hatteras",0,1
+"84","Cabezon - Northern California | Asmt",1,0
+"85","Cabezon - Oregon",1,0
+"86","Cabezon - Southern California | Asmt",1,0
+"87","Cabezon - Southern Pacific Coast",1,0
+"88","Cabezon - Washington | Asmt",1,0
+"89","California Blue and Deacon Rockfish Complex",1,1
+"90","California scorpionfish - Southern California",1,1
+"91","Canary rockfish - Pacific Coast",0,1
+"92","Caribbean spiny lobster - Puerto Rico",1,0
+"93","Caribbean spiny lobster - Southern Atlantic Coast / Gulf of Mexico",1,0
+"94","Caribbean spiny lobster - St. Croix",1,0
+"95","Caribbean spiny lobster - St. Thomas / St. John",1,0
+"96","Chilipepper - Southern Pacific Coast",1,1
+"97","China rockfish - Central Pacific Coast",1,0
+"98","China rockfish - Northern Pacific Coast",1,0
+"99","China rockfish - Pacific Coast",1,0
+"100","China rockfish - Southern Pacific Coast",1,0
+"101","Clearnose skate - Southern New England / Mid-Atlantic | Asmt & Status",0,1
+"102","Cobia - Gulf of Mexico",1,0
+"103","Cobia - Southern Atlantic Coast",1,0
+"104","Common bluestripe snapper - Main Hawaiian Islands",1,1
+"105","Copper rockfish - Northern California",1,0
+"106","Copper rockfish - Oregon",1,0
+"107","Copper rockfish - Pacific Coast",1,0
+"108","Copper rockfish - Southern California",0,1
+"109","Copper rockfish - Washington",1,0
+"110","Cowcod - Northern Pacific Coast",1,0
+"111","Cowcod - Southern California",0,1
+"112","Crimson jobfish - Main Hawaiian Islands",1,1
+"113","Darkblotched rockfish - Pacific Coast",0,1
+"114","Dover sole - Gulf of Alaska",0,1
+"115","Dover sole - Pacific Coast",0,1
+"116","Dusky shark - Atlantic and Gulf of Mexico",1,1
+"117","Eastern Bering Sea Blackspotted and Rougheye Rockfish Complex | Asmt",0,1
+"118","English sole - Pacific Coast",0,1
+"119","Eyestripe surgeonfish - Main Hawaiian Islands",1,1
+"120","Filament-f inned parrotfish - Guam | Asmt",1,0
+"121","Finetooth shark - Atlantic and Gulf of Mexico",0,1
+"122","Flag rockfish - Pacific Coast",1,0
+"123","Flathead sole - Bering Sea / Aleutian Islands",0,1
+"124","Flathead sole - Gulf of Alaska",0,1
+"125","Gag - Gulf of Mexico",1,1
+"126","Gag - Southern Atlantic Coast",1,1
+"127","Giant octopus - Bering Sea / Aleutian Islands",0,1
+"128","Giant trevally - Main Hawaiian Islands",1,1
+"129","Goatfish (Parupeneus porphyreus) - Main Hawaiian Islands | Asmt",1,1
+"130","Golden king crab - Eastern Aleutian Islands | Asmt",1,1
+"131","Golden king crab - Pribilof Islands",1,0
+"132","Golden king crab - Western Aleutian Islands | Asmt",1,0
+"133","Goosefish - Gulf of Maine / Northern Georges Bank",0,1
+"134","Goosefish - Southern Georges Bank / Mid-Atlantic",0,1
+"135","Gopher rockfish - Northern California",1,0
+"136","Gopher rockfish - Southern Pacific Coast",1,0
+"137","Grass rockfish - Pacific Coast",1,0
+"138","Gray snapper - Gulf of Mexico",0,1
+"139","Gray triggerfish - Gulf of Mexico",1,1
+"140","Greater amberjack - Gulf of Mexico",1,1
+"141","Greater amberjack - Southern Atlantic Coast",1,1
+"142","Green jobfish - Main Hawaiian Islands",1,1
+"143","Greenblotched rockfish - Pacific Coast",1,0
+"144","Greenland halibut - Bering Sea / Aleutian Islands",0,1
+"145","Greenspotted rockfish - Pacific Coast",1,1
+"146","Greenstriped rockfish - Pacific Coast",0,1
+"147","Guam Bottomfish Multi-species Complex",1,0
+"148","Gulf Smoothhound Complex",0,1
+"149","Gulf of Alaska Blackspotted and Rougheye Rockfish Complex",0,1
+"150","Gulf of Alaska Other Deepwater Flatfish Complex",0,1
+"151","Gulf of Alaska Other Rockfish Complex",0,1
+"152","Gulf of Alaska Other Shallow Water Flatfish Complex",0,1
+"153","Gulf of Alaska Sculpin Complex",0,1
+"154","Gulf of Alaska Shark Complex",0,1
+"155","Gulf of Alaska Skate Complex",0,1
+"156","Haddock - Eastern Georges Bank | Asmt",0,1
+"157","Haddock - Georges Bank",0,1
+"158","Haddock - Gulf of Maine",0,1
+"159","Hogfish - Eastern Gulf of Mexico | Asmt & Status",1,1
+"160","Hogfish - Southeast Florida | Asmt & Status",1,1
+"161","Honeycomb rockfish - Pacific Coast",1,0
+"162","Humpback red snapper - Guam | Asmt",1,1
+"163","Island jack - Guam | Asmt",1,0
+"164","Island jack - Main Hawaiian Islands",1,1
+"165","Kamchatka flounder - Bering Sea / Aleutian Islands",0,1
+"166","Kelp greenling - California",1,0
+"167","Kelp greenling - Oregon",1,0
+"168","Kelp rockfish - Pacific Coast",1,0
+"169","King mackerel - Gulf of Mexico",1,1
+"170","King mackerel - Southern Atlantic Coast",1,1
+"171","Lane snapper - Gulf of Mexico",1,0
+"172","Leopard shark - Pacific Coast",1,0
+"173","Lingcod - Northern Pacific Coast",1,1
+"174","Lingcod - Pacific Coast",1,1
+"175","Lingcod - Southern Pacific Coast",1,1
+"176","Little skate - Georges Bank / Southern New England | Asmt & Status",0,1
+"177","Longfin inshore squid - Georges Bank / Cape Hatteras | Asmt & Status",0,1
+"178","Longnose emperor - Guam | Asmt",1,0
+"179","Longnose skate - Gulf of Alaska",0,1
+"180","Longnose skate - Pacific Coast",0,1
+"181","Longspine thornyhead - Pacific Coast",0,1
+"182","Main Hawaiian Islands Deep 7 Bottomfish Multi-species Complex",1,1
+"183","Mexican rockfish - Pacific Coast",1,0
+"184","Mutton snapper - Southern Atlantic Coast / Gulf of Mexico | Asmt & Status",1,1
+"185","Naso tang - Main Hawaiian Islands",1,1
+"186","North Pacific spiny dogfish - Gulf of Alaska",0,1
+"187","Northern California Gopher / Black-and-Yellow Rockfish Complex",1,1
+"188","Northern Mariana Islands Bottomfish Multi-species Complex",1,0
+"189","Northern anchovy - Southern Pacific Coast",0,1
+"190","Northern rock sole - Bering Sea / Aleutian Islands",0,1
+"191","Northern rock sole - Central Gulf of Alaska | Asmt",0,1
+"192","Northern rock sole - Gulf of Alaska",0,1
+"193","Northern rock sole - Western Gulf of Alaska | Asmt",0,1
+"194","Northern rockfish - Bering Sea / Aleutian Islands",0,1
+"195","Northern rockfish - Western / Central Gulf of Alaska",0,1
+"196","Ocean pout - Northwestern Atlantic Coast",0,1
+"197","Ocean quahog - Atlantic Coast",0,1
+"198","Oceanic whitetip shark - Western and Central Pacific",1,0
+"199","Olive rockfish - Pacific Coast",1,0
+"200","Orange goatfish - Main Hawaiian Islands",1,1
+"201","Oregon Blue and Deacon Rockfish Complex",1,0
+"202","Pacific Coast Blackspotted and Rougheye Rockfish Complex | Asmt & Status",0,1
+"203","Pacific bluefin tuna - Pacific",1,0
+"204","Pacific chub mackerel - Pacific Coast",0,1
+"205","Pacific cod - Aleutian Islands",0,1
+"206","Pacific cod - Bering Sea",0,1
+"207","Pacific cod - Gulf of Alaska",0,1
+"208","Pacific grenadier - Pacific Coast",1,0
+"209","Pacific hake - Pacific Coast",0,1
+"210","Pacific halibut - Pacific Coast / Alaska | Asmt & Status",0,1
+"211","Pacific longnose parrotfish - Guam | Asmt",1,1
+"212","Pacific ocean perch - Bering Sea / Aleutian Islands",0,1
+"213","Pacific ocean perch - Gulf of Alaska",0,1
+"214","Pacific ocean perch - Pacific Coast",0,1
+"215","Pacific sanddab - Pacific Coast",0,1
+"216","Pacific sardine - Northern Subpopulation",0,1
+"217","Pacific sleeper shark - Bering Sea / Aleutian Islands",1,0
+"218","Palenose parrotfish - Main Hawaiian Islands | Asmt",1,1
+"219","Peacock hind - Main Hawaiian Islands",1,1
+"220","Petrale sole - Pacific Coast",1,1
+"221","Pink rockfish - Pacific Coast",1,0
+"222","Pollock - Gulf of Maine / Georges Bank",0,1
+"223","Porbeagle - Northwestern Atlantic",1,0
+"224","Quillback rockfish - California",1,0
+"225","Quillback rockfish - Oregon",1,1
+"226","Quillback rockfish - Pacific Coast",1,0
+"227","Quillback rockfish - Washington",1,1
+"228","Red deepsea crab - Northwestern Atlantic",0,1
+"229","Red grouper - Southern Atlantic Coast",1,1
+"230","Red hake - Gulf of Maine / Northern Georges Bank",0,1
+"231","Red hake - Southern Georges Bank / Mid-Atlantic",0,1
+"232","Red king crab - Bristol Bay",0,1
+"233","Red king crab - Norton Sound",1,1
+"234","Red king crab - Pribilof Islands",1,1
+"235","Red king crab - Western Aleutian Islands",1,0
+"236","Red porgy - Southern Atlantic Coast",1,1
+"237","Red snapper - Gulf of Mexico",1,1
+"238","Red snapper - Southern Atlantic Coast",1,1
+"239","Redbanded rockfish - Pacific Coast",1,0
+"240","Redlip parrotfish - Guam | Asmt",1,0
+"241","Redlip parrotfish - Main Hawaiian Islands | Asmt",1,1
+"242","Redstripe rockfish - Pacific Coast",1,0
+"243","Redtail parrotfish - Caribbean | Asmt",1,0
+"244","Regal parrotfish - Main Hawaiian Islands | Asmt",1,1
+"245","Rex sole - Eastern Gulf of Alaska | Asmt",0,1
+"246","Rex sole - Gulf of Alaska",0,1
+"247","Rex sole - Pacific Coast",0,1
+"248","Rex sole - Western / Central Gulf of Alaska | Asmt",0,1
+"249","Ringtail surgeonfish - Main Hawaiian Islands",1,1
+"250","Rock sole - Central Gulf of Alaska | Asmt",0,1
+"251","Rock sole - Gulf of Alaska",0,1
+"252","Rock sole - Pacific Coast",1,0
+"253","Rock sole - Western Gulf of Alaska | Asmt",0,1
+"254","Rosethorn rockfish - Pacific Coast",1,0
+"255","Rosette skate - Southern New England / Mid-Atlantic | Asmt & Status",0,1
+"256","Rosy rockfish - Pacific Coast",1,0
+"257","Rougheye rockfish - Bering Sea / Aleutian Islands",0,1
+"258","Rougheye rockfish - Gulf of Alaska",0,1
+"259","Rougheye rockfish - Pacific Coast",1,0
+"260","Royal red shrimp - Gulf of Mexico",1,0
+"261","Sablefish - Eastern Bering Sea / Aleutian Islands / Gulf of Alaska",1,1
+"262","Sablefish - Pacific Coast",0,1
+"263","Sailfish - Western Atlantic",1,0
+"264","Sand sole - Pacific Coast",1,0
+"265","Sandbar shark - Atlantic and Gulf of Mexico",0,1
+"266","Scamp - Gulf of Mexico | Asmt",0,1
+"267","Scup - Atlantic Coast",0,1
+"268","Sea scallop - Northwestern Atlantic Coast",0,1
+"269","Sharpchin rockfish - Pacific Coast",0,1
+"270","Shortbelly rockfish - Pacific Coast",0,1
+"271","Shortfin mako - North Pacific",1,1
+"272","Shortnosed unicornfish - Main Hawaiian Islands | Asmt",1,1
+"273","Shortraker rockfish - Bering Sea / Aleutian Islands",0,1
+"274","Shortraker rockfish - Gulf of Alaska",0,1
+"275","Shortraker rockfish - Pacific Coast",1,0
+"276","Shortspine thornyhead - Gulf of Alaska",0,1
+"277","Shortspine thornyhead - Pacific Coast",0,1
+"278","Silky shark - Western and Central Pacific",1,0
+"279","Silver hake - Gulf of Maine / Northern Georges Bank",0,1
+"280","Silver hake - Southern Georges Bank / Mid-Atlantic | Asmt & Status",0,1
+"281","Silvergray rockfish - Pacific Coast",1,0
+"282","Skipjack tuna - Eastern Pacific",1,0
+"283","Skipjack tuna - Western Atlantic",1,0
+"284","Skipjack tuna - Western and Central Pacific",1,0
+"285","Sleek unicornfish - Main Hawaiian Islands | Asmt",1,1
+"286","Smooth dogfish - Atlantic",0,1
+"287","Smooth skate - Gulf of Maine | Asmt & Status",0,1
+"288","Snow crab - Bering Sea",0,1
+"289","Snowy grouper - Southern Atlantic Coast",1,1
+"290","Southern Tanner crab - Bering Sea",1,1
+"291","Spanish mackerel - Gulf of Mexico",1,1
+"292","Spanish mackerel - Southern Atlantic Coast",1,1
+"293","Spanner crab - Main Hawaiian Islands",1,0
+"294","Speckled rockfish - Pacific Coast",1,0
+"295","Spectacled parrotfish - Main Hawaiian Islands | Asmt",1,1
+"296","Spiny dogfish - Atlantic Coast",0,1
+"297","Spiny dogfish - Pacific Coast",0,1
+"298","Splitnose rockfish - Pacific Coast",0,1
+"299","Squarespot rockfish - Pacific Coast",0,1
+"300","Stareye parrotfish - Main Hawaiian Islands | Asmt",1,1
+"301","Starry flounder - Pacific Coast",1,1
+"302","Starry rockfish - Pacific Coast",1,0
+"303","Steephead parrotfish - Guam | Asmt",1,1
+"304","Striped marlin - Western and Central North Pacific",1,0
+"305","Stripetail rockfish - Pacific Coast",0,1
+"306","Summer flounder - Mid-Atlantic Coast",0,1
+"307","Swordfish - North Atlantic",1,0
+"308","Swordfish - Western and Central North Pacific",1,0
+"309","Swordspine rockfish - Pacific Coast",1,0
+"310","Thorny skate - Gulf of Maine | Asmt & Status",0,1
+"311","Thresher shark - North Pacific",1,1
+"312","Tiger rockfish - Pacific Coast",1,0
+"313","Tilefish - Gulf of Mexico",0,1
+"314","Tilefish - Mid-Atlantic Coast",1,0
+"315","Tilefish - Southern Atlantic Coast",1,1
+"316","Tope - Pacific Coast",1,0
+"317","Treefish - Pacific Coast",1,0
+"318","Twosaddle goatfish - Main Hawaiian Islands | Asmt",1,1
+"319","Vermilion and Sunset Rockfish Complex - Southern California",1,1
+"320","Vermilion and Sunset rockfish Complex - Northern California",1,1
+"321","Vermilion rockfish - California",1,0
+"322","Vermilion rockfish - Oregon",1,0
+"323","Vermilion rockfish - Pacific Coast",1,0
+"324","Vermilion rockfish - Washington",1,0
+"325","Vermilion snapper - Gulf of Mexico",1,1
+"326","Vermilion snapper - Southern Atlantic Coast",1,1
+"327","Walleye pollock - Aleutian Islands",0,1
+"328","Walleye pollock - Bogoslof",0,1
+"329","Walleye pollock - Eastern Bering Sea",1,1
+"330","Walleye pollock - Southeast Gulf of Alaska",0,1
+"331","Walleye pollock - Western / Central / West Yakutat Gulf of Alaska",0,1
+"332","Weathervane scallop - Alaska",0,1
+"333","White hake - Gulf of Maine / Georges Bank",0,1
+"334","White marlin - Atlantic",1,0
+"335","Widow rockfish - Pacific Coast",0,1
+"336","Windowpane - Gulf of Maine / Georges Bank",0,1
+"337","Windowpane - Southern New England / Mid-Atlantic",0,1
+"338","Winter flounder - Georges Bank",0,1
+"339","Winter flounder - Gulf of Maine",0,1
+"340","Winter flounder - Southern New England / Mid-Atlantic",0,1
+"341","Winter skate - Georges Bank / Southern New England | Asmt & Status",0,1
+"342","Witch flounder - Northwestern Atlantic Coast",0,1
+"343","Yellowedge grouper - Gulf of Mexico | Asmt & Status",1,1
+"344","Yelloweye rockfish - Gulf of Alaska",0,1
+"345","Yelloweye rockfish - Pacific Coast",1,1
+"346","Yellowfin goatfish - Main Hawaiian Islands | Asmt",1,1
+"347","Yellowfin sole - Bering Sea / Aleutian Islands",0,1
+"348","Yellowfin tuna - Atlantic",1,1
+"349","Yellowfin tuna - Eastern Pacific",0,1
+"350","Yellowfin tuna - Western and Central Pacific",1,1
+"351","Yellowlip emperor - Guam | Asmt",1,0
+"352","Yellowmouth rockfish - Pacific Coast",1,0
+"353","Yellowstripe goatfish - Main Hawaiian Islands | Asmt",1,1
+"354","Yellowtail flounder - Cape Cod / Gulf of Maine",0,1
+"355","Yellowtail flounder - Georges Bank",0,1
+"356","Yellowtail flounder - Southern New England / Mid-Atlantic",0,1
+"357","Yellowtail rockfish - Northern Pacific Coast",0,1
+"358","Yellowtail snapper - Southern Atlantic Coast / Gulf of Mexico | Asmt & Status",1,1

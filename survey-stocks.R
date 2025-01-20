@@ -2,9 +2,11 @@
 ######################################
 # Janelle L. Morano
 
-# Quantify surveys used for stock assessment
+# THIS IS FOR INTERMEDIATE STOCK DATABASE BUILDING
+# PRODUCTS HERE ARE NOT FOR FINAL ANALYSIS
+# Pull surveys used for stock assessment and link to assessment database
 
-# last updated 27 November 2024
+# last updated 16 January 2025
 ###############################################
 ###############################################
 
@@ -13,8 +15,7 @@ library(janitor)
 library(cowplot)
 
 
-# It would be great to get updated data and with the Council column
-surveys <- read.csv("/Users/janellemorano/Git/spatial-info-ms/surveys and stocks.csv", header = TRUE)
+surveys <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/surveys and stocks.csv", header = TRUE)
 colnames(surveys)
 unique(surveys$Stock.Region)
 
@@ -43,6 +44,21 @@ surveys2 <- surveys |>
                                  .default = 0)
   )
 
+
+#---- For each species ("Entity.Name"), summarize if it has only fisheries-dependent data or has at least 1 source of fisheries-independent data
+
+datasources <- surveys2 |>
+  group_by(Entity.Name) |>
+  summarise(Fisheries.Dep.Only = max(N.fishDep),
+            Fisheries.Ind = max(N.fishIndep + N.fishOther))
+
+write.csv(datasources, "/Users/janellemorano/Git/spatial-info-ms/data/summarized-survey-data-sources-for-stocks.csv")
+
+
+
+
+
+#---- Extra summarizing done but not used
 # Summarize the number of fisheries-independent/dependent/other surveys per stock
 summarysurveys <- surveys2 |>
   select(Stock, Stock.Region, Region, N.fishIndep, N.fishDep, N.fishOther) |>
@@ -62,7 +78,7 @@ summary.region <- summarysurveys |>
   mutate(Prop.fishDep = Stocks.fishDep / count)
 
 ggplot(summary.region, aes(x = Council.Abbv, y = Prop.fishDep)) + 
-  geom_bar(stat = "identity") +
+  geom_point(stat = "identity") +
   theme_classic()
 
 
