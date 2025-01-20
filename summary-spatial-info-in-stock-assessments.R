@@ -16,7 +16,7 @@ library(cowplot)
 
 
 #----- Data Preparation
-si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/US Marine Fisheries Stocks and Assessments-Analysis_20250116.csv", header = TRUE, na.strings = c(""))
+si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/3-US Marine Fisheries Stocks and Assessments-forR_20250116.csv", header = TRUE, na.strings = c(""))
 str(si)
 colnames(si)
 # [1] "Common.Name"                  "Scientific.Name"              "Asmt.Year"                   
@@ -78,6 +78,10 @@ metrics[4, 2] <- nrow(si)
 
 print(metrics)
 
+
+
+#----- Write new csv for regression analyses
+write.csv(si, "/Users/janellemorano/Git/spatial-info-ms/data/4-US Marine Fisheries Stocks and Assessments-predictors_20250116.csv")
 
 
 #----- Stock Characteristics by Councils
