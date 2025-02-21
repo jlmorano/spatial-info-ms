@@ -1,0 +1,356 @@
+"","Scientific.Name","Mgmt.Council","SI.stock.boundaries","SI.data.prep","SI.model","SI.sci.advice","Assessment.Model.Type","Spatially.Explict.Implict","Rebuilding.Program.Status","Ave.Metric.Tons_Commercial","Ave.Metric.Tons_Recreational","Ave.Dollars.Adj_Commercial","PerTon_Ave.Dollars.Adj_Commercial","Schooling","Max.Length.m","Transboundary","Fisheries.Dep.Only","Ecological","Ecological.Num"
+"1","Sebastes fasciatus","New England",1,0,0,0,4,0,0,-0.0752704679865841,-0.24668417038965,-0.221050560166347,-0.642399188625834,0,0.47,1,0,"demersal/benthic, planktivorous",7
+"2","Pleuronectes quadrituberculatus","North Pacific",0,0,0,0,4,0,0,-0.0752195718816005,-0.296747664455394,-0.189138404045635,-0.812600058632615,0,0.87,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"3","Bathyraja parmifera","North Pacific",1,1,0,1,4,0,0,-0.0752430860598061,-0.296747664455394,-0.227746182934303,-0.815719948883318,0,0.905,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"4","Thunnus alalunga","International, Atlantic",1,1,0,0,4,0,0,-0.0752818301898695,0.613016292134838,-0.277243059601817,-0.380514245529696,1,1.4,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"5","Thunnus alalunga","International, Pacific",1,1,1,1,4,1,0,-0.075236467451604,0.345269178018189,0.283180969457714,-0.326681247257645,1,1.4,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"6","Thunnus alalunga","International, Pacific",0,1,1,0,4,2,0,-0.0752812102331352,-0.274192556704926,-0.262343240591556,-0.111159928877409,1,1.4,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"7","Hippoglossoides platessoides","New England",0,1,0,0,5,0,0,-0.0752755221507605,-0.296747664455394,-0.178749811579231,-0.19977480786154,0,0.826,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"8","Reinhardtius stomias","North Pacific",0,0,1,0,4,1,0,-0.0751644175021795,-0.296747664455394,-0.177896786531083,-0.840337746083056,0,0.84,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"9","Reinhardtius stomias","North Pacific",0,0,0,1,4,0,0,-0.0751644175021795,-0.296747664455394,-0.177896786531083,-0.840337746083056,0,0.84,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"10","Reinhardtius stomias (I think it should be Atheresthes stomias)","Pacific",0,0,0,0,4,0,0,-0.075274634579781,-0.296688696853432,-0.276172351884755,-0.829875805603648,0,0.84,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"11","Pleurogrammus monopterygius","North Pacific",0,1,0,1,4,0,0,-0.0750366268706687,-0.296747664455394,0.200830474824696,-0.792328819223556,0,0.565,1,0,"demersal/benthic, planktivorous",7
+"12","Pleurogrammus monopterygius","North Pacific",1,1,0,1,1,0,0,-0.0750366268706687,-0.296747664455394,0.200830474824696,-0.792328819223556,0,0.565,1,0,"demersal/benthic, planktivorous",7
+"13","Sphyrna tiburo","International, Atlantic",1,1,0,0,5,0,0,-0.0752824875546987,-0.116749059466369,-0.284893620406238,-0.640431424435674,0,1.5,1,NA,"reef-associated, piscivorous/omnivorous",9
+"14","Gadus morhua","New England",1,0,0,0,5,0,1,-0.0752583875683063,1.35134763140266,0.096012281672388,-0.171816551587043,0,2,1,0,"benthopelagic, piscivorous/omnivorous",3
+"15","Gadus morhua","New England",1,1,0,1,5,0,1,-0.0752583875683063,1.35134763140266,0.096012281672388,-0.171816551587043,0,2,1,0,"benthopelagic, piscivorous/omnivorous",3
+"16","Gadus morhua","New England",1,1,0,0,5,0,0,-0.0752583875683063,1.35134763140266,0.096012281672388,-0.171816551587043,0,2,1,0,"benthopelagic, piscivorous/omnivorous",3
+"17","Gadus morhua","New England",1,1,0,0,5,0,0,-0.0752583875683063,1.35134763140266,0.096012281672388,-0.171816551587043,0,2,1,0,"benthopelagic, piscivorous/omnivorous",3
+"18","Hippoglossus hippoglossus","New England",0,0,0,0,NA,0,1,-0.0752823682493376,-0.296747664455394,-0.275521676084146,1.58754273309048,0,4.7,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"19","Clupea harengus","New England",1,0,0,0,4,0,1,-0.0749930362139745,-0.287273929524178,0.233936645542109,-0.800565060977713,1,0.45,1,0,"benthopelagic, planktivorous",2
+"20","Scomber scombrus","Mid-Atlantic",0,1,0,0,4,0,1,-0.0752619025817947,-0.248072589702943,-0.249680216791078,-0.80382307540617,1,0.6,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"21","Salmo salar","New England",0,1,1,1,2,1,1,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,1.5,1,0,"benthopelagic, piscivorous/omnivorous",3
+"22","Rhizoprionodon terraenovae","International, Atlantic",1,1,0,0,4,0,0,-0.0752819198790238,-0.130982659227958,-0.282005033921607,-0.6513454842727,0,1.1,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"23","Rhizoprionodon terraenovae","International, Atlantic",1,1,0,0,5,0,0,-0.0752823923747091,-0.168837147177876,-0.284443172330502,-0.657958975977776,0,1.1,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"24","Spisula solidissima","Mid-Atlantic",1,1,1,0,4,1,0,-0.075213621467106,-0.296747664455394,0.169299122353677,-0.58475063459565,0,0.2,1,0,"demersal/benthic, planktivorous",7
+"25","Anarhichas lupus","New England",0,0,0,0,4,0,1,-0.0752820554767105,-0.276698679788312,-0.282089089485414,-0.59533921792877,0,1.5,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"26","Sebastes aurora","Pacific",0,0,0,0,4,0,0,-0.0752824405001921,-0.296747664455394,-0.284763294948463,-0.693052079844623,0,0.41,1,0,"bathydemersal",1
+"27","Dipturus laevis","New England",0,1,0,0,2,0,0,-0.0752821358392794,-0.296747664455394,-0.28426528320491,-0.778528173255797,0,1.63,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"28","Raja binoculata","North Pacific",0,0,0,0,2,0,0,-0.0752821398306002,-0.296747664455394,-0.283716354559974,-0.716531882500409,0,2.44,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"29","Raja binoculata","Pacific",0,1,0,0,4,0,0,-0.0752821398306002,-0.296747664455394,-0.283716354559974,-0.716531882500409,0,2.44,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"30","Alopias superciliosus","International, Pacific",0,1,0,1,1,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,4.88,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"31","Thunnus obesus","International, Atlantic",0,1,1,0,4,1,1,-0.0752805498172022,0.424874261314859,-0.217705761887101,0.639841308363045,1,2.5,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"32","Thunnus obesus","International, Pacific",0,1,1,0,4,1,0,-0.0752503799128407,-0.133538446005067,0.928655491293867,0.815226526083463,0,2.5,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"33","Thunnus obesus","International, Pacific",1,1,1,0,4,2,0,-0.0752503799128407,-0.133538446005067,0.928655491293867,0.815226526083463,0,2.5,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"34","Mycteroperca bonaci","South Atlantic",0,0,0,0,1,0,0,-0.0752825195422491,-0.284855904038124,-0.284272875452893,0.789371417030056,0,1.5,1,0,"reef-associated, piscivorous/omnivorous",9
+"35","Caranx lugubris","Western Pacific",0,0,0,0,4,0,0,-0.0752825438773932,-0.291440580278813,-0.285177169175547,0.796555439813885,0,1,1,1,"benthopelagic, piscivorous/omnivorous",3
+"36","Sebastes melanops","Pacific",1,1,1,1,4,1,0,-0.0752817670392288,0.533853112047271,-0.27121372475257,-0.0725571492113271,0,0.63,1,0,"benthopelagic, piscivorous/omnivorous",3
+"37","Sebastes melanops","Pacific",1,1,1,1,4,1,0,-0.0752817670392288,0.533853112047271,-0.27121372475257,-0.0725571492113271,0,0.63,1,0,"benthopelagic, piscivorous/omnivorous",3
+"38","Sebastes melanops","Pacific",1,1,1,1,4,1,0,-0.0752817670392288,0.533853112047271,-0.27121372475257,-0.0725571492113271,0,0.63,1,0,"benthopelagic, piscivorous/omnivorous",3
+"39","Sebastes melanops","Pacific",1,1,1,1,4,1,0,-0.0752817670392288,0.533853112047271,-0.27121372475257,-0.0725571492113271,0,0.63,1,1,"benthopelagic, piscivorous/omnivorous",3
+"40","Centropristis striata","Mid-Atlantic",1,1,1,0,5,2,0,-0.0752789741569932,2.05762819204086,-0.187746907786438,0.345769805913704,0,0.66,1,0,"reef-associated, piscivorous/omnivorous",9
+"41","Centropristis striata","South Atlantic",1,1,0,0,4,0,0,-0.0752813184425385,0.209292600403492,-0.256104636916137,0.18553877735927,0,0.66,1,0,"reef-associated, piscivorous/omnivorous",9
+"42","Sebastes melanostomus","Pacific",0,0,0,0,5,0,0,-0.0752821507421972,-0.296747664455394,-0.280885990744153,-0.388811854442292,0,0.7,1,0,"bathydemersal",1
+"43","Carcharhinus acronotus","International, Atlantic",1,1,0,0,5,0,1,-0.0752824037146599,-0.263254066540974,-0.284309124889151,-0.597155864524366,0,2,1,0,"reef-associated, piscivorous/omnivorous",9
+"44","Carcharhinus acronotus","International, Atlantic",1,1,0,0,5,0,0,-0.0752825163730211,-0.253316743654709,-0.285063056847812,-0.664608395714471,0,2,1,0,"reef-associated, piscivorous/omnivorous",9
+"45","Sebastes melanostictus and S. aleutianus","North Pacific",1,0,0,1,4,0,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,0.539,1,0,"benthopelagic, piscivorous/omnivorous",3
+"46","Sebastes melanostictus and S. aleutianus","North Pacific",1,0,0,1,2,0,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,0.539,1,0,"benthopelagic, piscivorous/omnivorous",3
+"47","Sebastes melanostictus and S. aleutianus","North Pacific",0,1,0,1,4,0,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,0.539,1,0,"benthopelagic, piscivorous/omnivorous",3
+"48","Sebastes melanostictus and S. aleutianus","Pacific",0,0,0,0,5,0,0,-0.0752819468174624,-0.296747664455394,-0.260905960689785,0.945996008544674,0,0.539,1,0,"benthopelagic, piscivorous/omnivorous",3
+"49","Carcharhinus limbatus","International, Atlantic",1,1,1,0,4,1,0,-0.0752819180182342,-0.177583964892665,-0.282013428472782,-0.652630547559409,0,2.86,1,0,"reef-associated, piscivorous/omnivorous",9
+"50","Carcharhinus limbatus","International, Atlantic",1,1,1,0,4,1,0,-0.0752817592705136,-0.0831375263480247,-0.28138547297721,-0.662886698084322,0,2.86,1,0,"reef-associated, piscivorous/omnivorous",9
+"51","Sebastes mystinus and S. diaconus","Pacific",1,1,1,1,1,1,0,-0.0752825033189706,-0.130964497206553,-0.284493142212908,-0.110407437677727,0,0.61,1,0,"reef-associated, piscivorous/omnivorous",9
+"52","Sebastes mystinus and S. diaconus","Pacific",1,1,1,1,1,1,0,-0.0752825033189706,-0.130964497206553,-0.284493142212908,-0.110407437677727,0,0.61,1,1,"reef-associated, piscivorous/omnivorous",9
+"53","Paralithodes platypus","North Pacific",1,0,0,0,2,0,1,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.22,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"54","Paralithodes platypus","North Pacific",1,0,0,0,4,0,1,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.22,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"55","Makaira nigricans","International, Atlantic",0,0,0,0,4,0,1,-0.0752825444433268,0.307847158461061,-0.285198107145241,-0.881169202077059,0,5,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"56","Makaira mazara","International, Pacific",1,1,1,0,4,1,0,-0.0752801720497439,0.240624092224373,-0.25355200054273,-0.281551990330799,0,5,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"57","Prionace glauca","International, Atlantic",1,0,0,0,4,0,0,-0.0752824991686401,1.02373354145888,-0.285159519051542,-0.842673762156852,0,4,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"58","Prionace glauca","International, Pacific",1,1,1,0,4,1,0,-0.0752825444433268,-0.296747664455394,-0.285196649846709,-0.881169202077059,0,4,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"59","Thunnus thynnus","International, Atlantic",1,1,1,1,4,1,0,-0.0752791945914427,1.66347883396968,-0.0807598559890534,1.86214122918877,0,4.58,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"60","Pomatomus saltatrix","Mid-Atlantic",0,1,0,0,5,0,1,-0.075277945478366,6.83322204056139,-0.260394514171097,-0.638733967405692,0,1.3,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"61","Caulolatilus microps","Mid-Atlantic",0,0,0,0,1,0,0,-0.0752824997591795,-0.211539479620294,-0.284248280682519,0.0745124073207756,0,0.9,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"62","Caulolatilus microps","South Atlantic",0,0,0,0,1,0,0,-0.0752822062036884,-0.20721518841663,-0.278377951467295,0.0252300867322688,0,0.9,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"63","Sebastes paucispinis","Pacific",1,1,0,1,1,0,0,-0.0752819885079016,-0.19818752806268,-0.282546457628564,-0.66675180184463,0,0.91,1,0,"reef-associated, piscivorous/omnivorous",9
+"64","Sebastes gilli","Pacific",0,0,0,0,1,0,0,-0.0752825444433268,-0.296747664455394,-0.285186439384156,-0.881169202077059,0,0.71,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"65","Sicyonia brevirostris","South Atlantic",0,NA,0,0,2,0,0,-0.0752801720497439,-0.296747664455394,-0.249134227978044,-0.197846369196102,0,0.153,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"66","Sebastes auriculatus","Pacific",1,1,1,1,1,1,0,-0.0752824442730825,-0.211008771202636,-0.27911696849262,1.84779206082497,0,0.31,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"67","Farfantepenaeus aztecus","South Atlantic",0,1,0,0,2,0,0,-0.0751795283091718,-0.296747664455394,1.59178579416204,-0.0621513795965385,0,0.22,1,NA,"demersal/benthic, planktivorous",7
+"68","Farfantepenaeus aztecus","South Atlantic",0,NA,0,0,1,0,0,-0.0752705577798702,-0.296747664455394,-0.04531919163211,0.0183948856803881,0,0.22,1,NA,"demersal/benthic, planktivorous",7
+"69","Peprilus triacanthus","Mid-Atlantic",0,0,0,0,5,0,0,-0.0752813678341158,-0.296747664455394,-0.274812439512804,-0.484390905671943,1,0.3,1,0,"benthopelagic, planktivorous",2
+"70","Scorpaenichthys marmoratus","Pacific",1,1,1,1,4,1,0,-0.0752822661926483,-0.237948544725713,-0.272034525625852,1.2454118404843,0,0.99,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"71","Scorpaenichthys marmoratus","Pacific",1,1,1,1,4,1,0,-0.0752822661926483,-0.237948544725713,-0.272034525625852,1.2454118404843,0,0.99,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"72","Scorpaenichthys marmoratus","Pacific",1,1,1,1,4,1,0,-0.0752822661926483,-0.237948544725713,-0.272034525625852,1.2454118404843,0,0.99,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"73","Scorpaenichthys marmoratus","Pacific",1,1,1,1,4,1,0,-0.0752822661926483,-0.237948544725713,-0.272034525625852,1.2454118404843,0,0.99,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"74","Scorpaena guttata","Pacific",0,0,0,0,4,0,0,-0.0752825444433268,-0.193026754300087,-0.28519829181275,NA,0,0.43,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"75","Sebastes pinniger","Pacific",0,1,1,0,4,1,0,-0.0752818843761222,-0.245136978449371,-0.282573536193739,-0.702422215496685,0,0.76,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"76","Panulirus argus","Caribbean",0,1,0,0,4,0,0,-0.075281646872663,-0.296747664455394,-0.227254014848208,2.0207138672201,0,0.45,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"77","Panulirus argus","Caribbean",0,0,0,0,4,0,0,-0.075281646872663,-0.296747664455394,-0.227254014848208,2.0207138672201,0,0.45,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"78","Panulirus argus","Caribbean",0,1,0,0,4,0,0,-0.075281646872663,-0.296747664455394,-0.227254014848208,2.0207138672201,0,0.45,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"79","Panulirus argus","Caribbean",0,1,0,0,4,0,0,-0.075281646872663,-0.296747664455394,-0.227254014848208,2.0207138672201,0,0.45,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"80","Sebastes goodei","Pacific",0,0,0,0,4,0,0,-0.0752810916918174,-0.281475055547234,-0.277649921563064,-0.647608447761,0,0.56,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"81","Sebastes nebulosus","Pacific",1,1,1,1,4,1,0,-0.0752825093554446,-0.278046514059878,-0.28302902560083,1.89786381076696,0,0.45,1,1,"reef-associated, piscivorous/omnivorous",9
+"82","Sebastes nebulosus","Pacific",1,1,1,1,4,1,0,-0.0752825093554446,-0.278046514059878,-0.28302902560083,1.89786381076696,0,0.45,1,1,"reef-associated, piscivorous/omnivorous",9
+"83","Sebastes nebulosus","Pacific",1,1,1,1,4,1,0,-0.0752825093554446,-0.278046514059878,-0.28302902560083,1.89786381076696,0,0.45,1,1,"reef-associated, piscivorous/omnivorous",9
+"84","Raja eglanteria","New England",0,1,0,0,2,0,0,-0.075282532370077,-0.287018010131663,-0.285154815875724,-0.719300540850596,0,0.84,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"85","Rachycentron canadum","Joint Council Mgmt, Atlantic",1,1,0,1,4,0,0,-0.0752823652310255,0.748846158355854,-0.280219393396627,0.367661188635891,0,2,1,1,"reef-associated, piscivorous/omnivorous",9
+"86","Lutjanus kasmira","Western Pacific",0,0,0,0,4,0,0,-0.0752824848897002,-0.285478295283313,-0.284203079759874,-0.129986767368296,0,0.4,1,0,"reef-associated, piscivorous/omnivorous",9
+"87","Sebastes caurinus","Pacific",1,1,0,1,4,0,0,-0.0752825031301752,-0.190830623900216,-0.283367065647258,1.1113002359791,0,0.58,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"88","Sebastes caurinus","Pacific",1,1,0,1,4,0,0,-0.0752825031301752,-0.190830623900216,-0.283367065647258,1.1113002359791,0,0.58,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"89","Sebastes caurinus","Pacific",1,1,1,1,4,1,0,-0.0752825031301752,-0.190830623900216,-0.283367065647258,1.1113002359791,0,0.58,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"90","Sebastes caurinus","Pacific",1,1,1,1,4,1,0,-0.0752825031301752,-0.190830623900216,-0.283367065647258,1.1113002359791,0,0.58,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"91","Sebastes levis","Pacific",1,0,0,0,4,0,0,-0.0752825417268456,-0.296673954952942,-0.285183198793172,-0.631418083717827,0,1,1,0,"bathydemersal",1
+"92","Pristipomoides filamentosus","Western Pacific",0,1,0,0,2,0,0,-0.0752823459312392,-0.220819859784677,-0.271638604412618,2.18927161869362,0,1,1,0,"benthopelagic, piscivorous/omnivorous",3
+"93","Sebastes crameri","Pacific",0,1,0,0,4,0,0,-0.0752817959018416,-0.296747664455394,-0.282490370211051,-0.718555093621589,0,0.58,1,0,"bathydemersal",1
+"94","Coryphaena hippurus","South Atlantic",1,0,0,0,1,0,0,-0.0752818253747752,5.44856403472779,-0.267108524568574,0.249669579228444,1,2.1,1,1,"pelagic-neritic, piscivorous/omnivorous",6
+"95","Microstomus pacificus","North Pacific",1,1,0,1,4,0,0,-0.0752815311527189,-0.296747664455394,-0.284063593548779,-0.830832543455233,0,0.76,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"96","Microstomus pacificus","Pacific",0,1,1,0,4,1,0,-0.0752501888884791,-0.296747664455394,-0.155564800301766,-0.701072244226583,0,0.76,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"97","Sebastes variabilis","North Pacific",0,1,0,1,4,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,0.53,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"98","Carcharhinus obscurus","International, Atlantic",0,1,0,0,4,0,1,-0.0752824176742041,-0.234045408390726,-0.2846240733404,-0.67755799212716,0,4.2,1,1,"reef-associated, piscivorous/omnivorous",9
+"99","Parophrys vetulus","Pacific",0,0,0,0,4,0,0,-0.0752801339435478,-0.296747664455394,-0.276105032971004,-0.711598636851761,0,0.49,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"100","Carcharhinus isodon","International, Atlantic",1,1,0,0,2,0,0,-0.075282273853593,-0.266896967054983,-0.283291337610554,-0.564382488931486,0,2,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"101","Sebastes rubrivinctus","Pacific",0,0,0,0,1,0,0,-0.0752825440660378,-0.286816278427295,-0.285169707038731,2.52446958334984,0,0.51,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"102","Etelis coruscans","Western Pacific",0,0,0,0,4,0,0,-0.0752824406598143,-0.269740502756795,-0.276564669744576,2.85823730132921,0,1.2,1,NA,"reef-associated, piscivorous/omnivorous",9
+"103","Hippoglossoides elassodon","North Pacific",1,0,0,0,4,0,0,-0.075215579786101,-0.296747664455394,-0.183103630073806,-0.81263688829588,0,0.52,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"104","Hippoglossoides elassodon","North Pacific",1,1,0,1,4,0,0,-0.075215579786101,-0.296747664455394,-0.183103630073806,-0.81263688829588,0,0.52,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"105","Mycteroperca microlepis","Gulf of Mexico",0,0,0,0,4,0,1,-0.0752812101605825,2.2203336042729,-0.239032455313188,0.67411890068159,0,1.45,1,0,"reef-associated, piscivorous/omnivorous",9
+"106","Mycteroperca microlepis","South Atlantic",0,1,0,0,4,0,1,-0.0752816502682645,0.0452152479442086,-0.249416019141265,0.917632862965503,0,1.45,1,0,"reef-associated, piscivorous/omnivorous",9
+"107","Enteroctopus dofleini","North Pacific",1,0,0,0,1,0,0,13.2666016914582,-0.296747664455394,-0.279173701206229,-0.881169181779287,0,3,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"108","Enteroctopus dofleini","North Pacific",1,0,0,0,2,0,0,13.2666016914582,-0.296747664455394,-0.279173701206229,-0.881169181779287,0,3,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"109","Chaceon fenneri","South Atlantic",0,0,0,0,2,0,0,-0.0752815125920578,-0.296747664455394,-0.260596207291462,0.190579123856656,0,0.19,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"110","Pristipomoides flavipinnis","Western Pacific",0,0,0,0,4,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,0.766,1,NA,"reef-associated, piscivorous/omnivorous",9
+"111","Lithodes aequispinus","North Pacific",1,0,0,0,4,0,0,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.039,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"112","Lithodes aequispinus","North Pacific",1,0,0,0,4,0,0,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.039,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"113","Lithodes aequispinus","North Pacific",1,0,0,0,4,0,0,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.039,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"114","Epinephelus itajara","Caribbean",0,0,0,0,NA,0,1,-0.0752825444433268,-0.294388960376914,-0.28519829181275,NA,0,2.5,1,NA,"reef-associated, piscivorous/omnivorous",9
+"115","Epinephelus itajara","Gulf of Mexico",0,1,0,0,4,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,2.5,1,NA,"reef-associated, piscivorous/omnivorous",9
+"116","Epinephelus itajara","South Atlantic",0,0,0,0,1,0,0,-0.0752825444433268,-0.294388960376914,-0.28519829181275,NA,0,2.5,1,NA,"reef-associated, piscivorous/omnivorous",9
+"117","Lophius americanus","New England",1,0,0,0,NA,0,0,-0.0752359945194707,-0.293935363420601,0.156867365205237,-0.454289197771147,0,1.2,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"118","Lophius americanus","New England",1,0,0,0,NA,0,0,-0.0752359945194707,-0.293935363420601,0.156867365205237,-0.454289197771147,0,1.2,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"119","Sebastes carnatus and S. chrysomelas","Pacific",1,0,0,0,5,0,0,-0.075282430501881,-0.2422616002425,-0.277471364852971,2.16716859804167,0,0.39,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"120","Sebastes rastrelliger","Pacific",0,0,0,0,1,0,0,-0.0752824852089452,-0.287961491763055,-0.27957087516627,3.3892766770501,0,0.56,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"121","Lutjanus griseus","Gulf of Mexico",0,1,0,0,4,0,0,-0.0752822873208351,1.71901062963577,-0.279106090827884,0.183886114684649,0,0.89,1,0,"reef-associated, piscivorous/omnivorous",9
+"122","Lutjanus griseus","South Atlantic",0,0,0,0,NA,0,0,-0.0752824661558476,0.534793763233769,-0.283038383416835,0.359000260889704,0,0.89,1,0,"reef-associated, piscivorous/omnivorous",9
+"123","Balistes capriscus","Gulf of Mexico",0,1,0,0,4,0,1,-0.0752824790465573,0.193813640269027,-0.284168126150345,-0.173078674159837,0,0.66,1,0,"reef-associated, piscivorous/omnivorous",9
+"124","Balistes capriscus","South Atlantic",0,1,1,1,4,1,0,-0.0752822056377548,0.0402521807574743,-0.276495515886473,0.273467259975172,0,0.66,1,0,"reef-associated, piscivorous/omnivorous",9
+"125","Seriola dumerili","Gulf of Mexico",0,1,0,0,4,0,1,-0.0752817139357927,1.13238131269331,-0.274615703241081,-0.308391179647163,0,1.9,1,0,"reef-associated, piscivorous/omnivorous",9
+"126","Seriola dumerili","South Atlantic",0,1,0,0,4,0,0,-0.0752817668505828,0.39371381092023,-0.274903460982503,-0.286048544831623,0,1.9,1,0,"reef-associated, piscivorous/omnivorous",9
+"127","Aprion virescens","Western Pacific",0,0,0,0,4,0,0,-0.0752823807579208,-0.228404213781428,-0.277749808768663,1.16431384239949,0,1.12,1,0,"reef-associated, piscivorous/omnivorous",9
+"128","Aprion virescens","Western Pacific",0,0,0,0,4,0,0,-0.0752823807579208,-0.228404213781428,-0.277749808768663,1.16431384239949,0,1.12,1,0,"reef-associated, piscivorous/omnivorous",9
+"129","Sebastes rosenblatti","Pacific",0,0,0,0,1,0,0,-0.0752825425568815,-0.293457892605087,-0.285144335322351,0.404524415691469,0,0.48,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"130","Reinhardtius hippoglossoides","North Pacific",1,0,0,1,4,0,0,-0.0752707177519541,-0.296747664455394,-0.246079255655225,-0.73248566217688,0,1.3,1,0,"benthopelagic, piscivorous/omnivorous",3
+"131","Sebastes chlorostictus","Pacific",0,0,0,0,4,0,0,-0.0752825312382098,-0.276757647390274,-0.284971771803048,-0.110084069766264,0,0.5,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"132","Sebastes elongatus","Pacific",0,0,0,0,4,0,0,-0.0752825069030657,-0.294919668794572,-0.285093065045102,-0.755170244620266,0,0.5,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"133","Melanogrammus aeglefinus","New England",1,1,0,0,5,0,0,-0.0752559817846419,0.529142780002546,0.0287632742727229,-0.349865361673505,0,1.12,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"134","Melanogrammus aeglefinus","New England",1,1,0,0,5,0,0,-0.0752559817846419,0.529142780002546,0.0287632742727229,-0.349865361673505,0,1.12,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"135","Melanogrammus aeglefinus","New England",1,1,0,1,5,0,0,-0.0752559817846419,0.529142780002546,0.0287632742727229,-0.349865361673505,0,1.12,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"136","Lachnolaimus maximus","South Atlantic",1,0,0,0,4,0,0,-0.0752824895477692,-0.211736077605236,-0.283296695549694,0.675940191141188,0,0.91,1,0,"reef-associated, piscivorous/omnivorous",9
+"137","Lachnolaimus maximus","South Atlantic",1,0,0,0,4,0,0,-0.0752824895477692,-0.211736077605236,-0.283296695549694,0.675940191141188,0,0.91,1,0,"reef-associated, piscivorous/omnivorous",9
+"138","Lachnolaimus maximus","South Atlantic",1,0,0,0,4,0,1,-0.0752824895477692,-0.211736077605236,-0.283296695549694,0.675940191141188,0,0.91,1,0,"reef-associated, piscivorous/omnivorous",9
+"139","Sebastes umbrosus","Pacific",0,0,0,0,1,0,0,-0.0752825444433268,-0.291968184641904,-0.285193199052594,-0.881169202077059,0,0.298,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"140","Trachurus symmetricus","Pacific",0,0,0,0,NA,0,0,-0.0752784206739484,-0.296747664455394,-0.282064223554707,-0.847006509586885,1,0.81,1,NA,"pelagic-oceanic, piscivorous/omnivorous",4
+"141","Reinhardtius evermanni","North Pacific",1,1,0,0,4,0,0,-0.0752195718816005,-0.296747664455394,-0.189138408169723,-0.812600061576457,0,1,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"142","Hexagrammos decagrammus","Pacific",1,1,1,1,1,1,0,-0.0752824397456138,-0.278383468382102,-0.280189522197427,1.26929328666133,0,0.61,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"143","Sebastes atrovirens","Pacific",0,0,0,0,1,0,0,-0.0752825401045027,-0.28663006534467,-0.285011957333326,1.04928360104374,0,0.42,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"144","Scomberomorus cavalla","Joint Council Mgmt, Atlantic",0,1,0,0,4,0,0,-0.075276825535555,2.935561437092,-0.159760038895007,0.104780849524875,1,1.84,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"145","Scomberomorus cavalla","Joint Council Mgmt, Atlantic",0,1,0,0,4,0,0,-0.075276825535555,2.935561437092,-0.159760038895007,0.104780849524875,1,1.84,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"146","Lutjanus synagris","Gulf of Mexico",0,1,0,0,1,0,0,-0.0752825067144212,-0.00338384469441062,-0.28436573306904,0.110755461925575,0,0.6,1,1,"reef-associated, piscivorous/omnivorous",9
+"147","Lutjanus synagris","South Atlantic",0,0,0,0,NA,0,0,-0.0752825399158581,-0.191343075948307,-0.285055061814483,0.540886287729028,0,0.6,1,1,"reef-associated, piscivorous/omnivorous",9
+"148","Triakis semifasciata","Pacific",0,0,0,0,1,0,0,-0.0752825167125812,-0.267512148095609,-0.284943764030375,-0.468585890674743,0,1.98,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"149","Ophiodon elongatus","Pacific",1,1,1,1,4,1,0,-0.0752807215712537,0.3554340132444,-0.262515369344889,-0.321822828064052,0,1.52,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"150","Ophiodon elongatus","Pacific",1,0,1,0,4,1,0,-0.0752807215712537,0.3554340132444,-0.262515369344889,-0.321822828064052,0,1.52,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"151","Leucoraja erinacea","New England",0,1,0,0,2,0,0,-0.0752668205446371,-0.292723992787248,-0.267319523465059,-0.830058085273156,0,0.62,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"152","Tetrapturus pfluegeri","International, Atlantic",NA,NA,NA,NA,NA,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,2.54,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"153","Loligo pealeii","Mid-Atlantic",0,0,0,0,2,0,0,-0.0752630593500398,-0.296747664455394,-0.0859047508377834,-0.421411784752047,0,0.5,1,0,"benthopelagic, piscivorous/omnivorous",3
+"154","Raja rhina","North Pacific",1,1,0,1,2,0,0,-0.0752430860598061,-0.296747664455394,-0.227746182934303,-0.815719948883318,0,1.8,1,0,"bathydemersal",1
+"155","Raja rhina","Pacific",0,1,1,0,4,1,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,1.8,1,0,"bathydemersal",1
+"156","Sebastolobus altivelis","Pacific",0,0,1,0,4,1,0,-0.0752794691602329,-0.296747664455394,-0.27064016798255,-0.668375721289881,0,0.39,1,0,"bathydemersal",1
+"157","Sebastes macdonaldi","Pacific",0,0,0,0,1,0,0,-0.0752825406704363,-0.291931980893004,-0.285101759994715,0.268927319500891,0,0.66,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"158","American Samoa Bottomfish Multi-species Complex","Western Pacific",0,1,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,1,"NA",NA
+"159","Bering Sea / Aleutian Islands Other Flatfish Complex","North Pacific",0,1,0,1,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"160","Bering Sea / Aleutian Islands Other Rockfish Complex","North Pacific",0,1,1,1,2,1,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"161","Bering Sea / Aleutian Islands Other Skates Complex","North Pacific",1,1,0,1,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"162","Bering Sea / Aleutian Islands Shark Complex","North Pacific",0,0,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,NA,"NA",NA
+"163","Bering Sea / Aleutian Islands Skate Complex","North Pacific",0,1,0,1,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"164","Guam Bottomfish Multi-species Complex","Western Pacific",0,1,0,0,2,0,1,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,1,"NA",NA
+"165","Gulf of Alaska Other Deepwater Flatfish Complex","North Pacific",1,1,0,1,1,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"166","Gulf of Alaska Other Rockfish Complex","North Pacific",1,0,0,1,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"167","Gulf of Alaska Other Shallow Water Flatfish Complex","North Pacific",1,0,0,1,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"168","Gulf of Alaska Sculpin Complex","North Pacific",0,0,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"169","Gulf of Alaska Shallow Water Flatfish Complex","North Pacific",1,0,0,1,4,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"170","Gulf of Alaska Shark Complex","North Pacific",0,0,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"171","Gulf of Alaska Skate Complex","North Pacific",0,1,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"172","Gulf of Alaska Squid Complex","North Pacific",0,0,0,0,1,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,NA,"NA",NA
+"173","Thornyhead rockfish complex","North Pacific",0,0,1,0,2,1,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,NA,"NA",NA
+"174","Gulf Smoothhound Complex","International, Atlantic",0,1,0,0,5,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"175","Main Hawaiian Islands Deep 7 Bottomfish Multi-species Complex","Western Pacific",0,1,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,0,"NA",NA
+"176","CNMI Bottomfish Multi-species Complex","Western Pacific",0,1,0,0,4,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,NA,"NA",NA
+"177","Northern Mariana Islands Bottomfish Multi-species Complex","Western Pacific",0,0,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,1,"NA",NA
+"178","Northwestern Hawaiian Islands Bottomfish Multi-species Complex *","Western Pacific",0,0,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,NA,"NA",NA
+"179","South Atlantic Snappers Complex","South Atlantic",NA,NA,NA,NA,NA,NA,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,NA,NA,NA,NA,"NA",NA
+"180","Lutjanus analis","Joint Council Mgmt, Atlantic",1,1,0,1,4,0,0,-0.0752824755880743,0.0498835950563367,-0.283154130888453,0.453322927997084,0,0.94,1,0,"reef-associated, piscivorous/omnivorous",9
+"181","Squalus suckleyi","North Pacific",0,0,0,0,1,0,0,-0.0752824370188553,-0.296747664455394,-0.285046863294361,-0.817805220727725,0,1.4,1,0,"benthopelagic, piscivorous/omnivorous",3
+"182","Squalus suckleyi","North Pacific",0,0,0,0,2,0,0,-0.0752824370188553,-0.296747664455394,-0.285046863294361,-0.817805220727725,0,1.4,1,0,"benthopelagic, piscivorous/omnivorous",3
+"183","Engraulis mordax","Pacific",1,1,0,0,NA,0,0,-0.0752461324652107,-0.292207159104319,-0.262997060261044,-0.85376161493597,1,0.248,1,0,"pelagic-neritic, planktivorous",5
+"184","Engraulis mordax","Pacific",1,1,0,0,4,0,0,-0.0752461324652107,-0.292207159104319,-0.262997060261044,-0.85376161493597,1,0.248,1,0,"pelagic-neritic, planktivorous",5
+"185","Lepidopsetta polyxystra","North Pacific",0,0,0,0,4,0,0,-0.0751116947537414,-0.296747664455394,0.0365855302971508,-0.796507299879071,0,0.69,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"186","Lepidopsetta polyxystra","North Pacific",0,0,0,0,4,0,0,-0.0751116947537414,-0.296747664455394,0.0365855302971508,-0.796507299879071,0,0.69,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"187","Lepidopsetta polyxystra","North Pacific",0,1,0,1,4,0,0,-0.0751116947537414,-0.296747664455394,0.0365855302971508,-0.796507299879071,0,0.69,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"188","Sebastes polyspinis","North Pacific",0,0,0,0,4,0,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,0.41,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"189","Sebastes polyspinis","North Pacific",0,1,0,1,4,0,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,0.41,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"190","Illex illecebrosus","Joint Council Mgmt, Atlantic",0,0,0,0,4,0,0,-0.0752567869194719,-0.296747664455394,-0.17446368159309,-0.687920190701704,1,0.27,1,NA,"pelagic-neritic, planktivorous",5
+"191","Pristipomoides zonatus","Western Pacific",0,0,0,0,4,0,0,-0.0752825385227908,-0.296747664455394,-0.284931723559086,1.14271384979059,0,0.575,1,0,"benthopelagic, piscivorous/omnivorous",3
+"192","Zoarces americanus","New England",0,0,0,0,2,0,1,-0.0752825362938832,-0.294624830784762,-0.285176544762002,-0.761216393936574,0,1.1,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"193","Arctica islandica","Mid-Atlantic",1,1,1,0,4,1,0,-0.0752497659184114,-0.296747664455394,-0.0699229571012387,-0.585951172214204,0,0.13,1,0,"demersal/benthic, planktivorous",7
+"194","Carcharhinus longimanus","Western Pacific",0,1,0,0,4,0,0,-0.0752825444433268,-0.296747664455394,-0.285196649846709,-0.881169202077059,0,4,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"195","Merluccius albidus","New England",1,0,0,0,2,0,0,-0.075282522371917,-0.296747664455394,-0.285013566884033,-0.504956508969686,0,0.7,1,NA,"bathydemersal",1
+"196","Sebastes serranoides","Pacific",0,0,0,0,1,0,0,-0.0752825374634793,-0.251621928681622,-0.285052955988709,0.0548068794712119,0,0.61,1,1,"reef-associated, piscivorous/omnivorous",9
+"197","Loligo opalescens","Pacific",0,1,0,0,1,0,0,-0.0749880629779836,-0.296747664455394,0.583248746326009,-0.748605878784949,0,0.192,1,NA,"pelagic-oceanic, piscivorous/omnivorous",4
+"198","Thunnus orientalis","International, Pacific",1,1,1,0,4,1,0,-0.0752825368975442,-0.296747664455394,-0.284795320882986,1.51936245425052,1,3,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"199","Scomber japonicus","Pacific",0,0,0,0,4,0,0,-0.0752619095616573,-0.0803955328567914,-0.266054655504018,-0.839466858461151,1,0.64,1,0,"pelagic-neritic, planktivorous",5
+"200","Gadus macrocephalus","North Pacific",1,1,1,1,2,1,0,-0.0741664417316661,-0.296747664455394,3.07652309210404,-0.745776403987037,0,1.19,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"201","Gadus macrocephalus","North Pacific",0,1,0,0,4,0,0,-0.0741664417316661,-0.296747664455394,3.07652309210404,-0.745776403987037,0,1.19,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"202","Gadus macrocephalus","North Pacific",0,1,0,1,2,0,0,-0.0741664417316661,-0.296747664455394,3.07652309210404,-0.745776403987037,0,1.19,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"203","Coryphaenoides acrolepis","Pacific",0,0,0,0,1,0,0,-0.0752824276346351,-0.296747664455394,-0.28499932926652,-0.804603515577296,0,1.04,1,1,"bathydemersal",1
+"204","Merluccius productus","International, Pacific",0,1,0,1,4,0,0,-0.0743781431513652,-0.296685593294193,0.456214761604642,-0.844319238394378,0,0.83,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"205","Hippoglossus stenolepis","Pacific",0,1,0,0,4,0,0,-0.0752800426395993,-0.296747664455394,-0.194969875891689,0.739999115712768,0,2.58,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"206","Sebastes alutus","North Pacific",0,1,0,1,4,0,0,-0.0751053076273157,-0.296747664455394,0.023938121516909,-0.802765921569312,0,0.53,1,0,"bathydemersal",1
+"207","Sebastes alutus","North Pacific",0,1,0,1,4,0,0,-0.0751053076273157,-0.296747664455394,0.023938121516909,-0.802765921569312,0,0.53,1,0,"bathydemersal",1
+"208","Sebastes alutus","Pacific",0,0,1,0,4,1,0,-0.0752817964677752,-0.296747664455394,-0.28283074919597,-0.738887709389728,0,0.53,1,0,"bathydemersal",1
+"209","Citharichthys sordidus","Pacific",0,0,0,0,4,0,0,-0.075281856079443,-0.253111639003509,-0.281746159278379,-0.655741442502813,0,0.41,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"210","Sardinops sagax","Pacific",0,0,0,0,4,0,0,-0.0750633398793441,-0.271096757601921,-0.114150187082041,-0.846093474816123,1,0.395,1,0,"pelagic-neritic, planktivorous",5
+"211","Somniosus pacificus","North Pacific",0,0,0,0,1,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,4.4,1,1,"benthopelagic, piscivorous/omnivorous",3
+"212","Somniosus pacificus","North Pacific",0,0,0,0,1,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,4.4,1,1,"benthopelagic, piscivorous/omnivorous",3
+"213","Eopsetta jordani","Pacific",0,1,1,0,4,1,0,-0.0752724529043218,-0.292030256298433,-0.174997211535387,-0.390299237849756,0,0.53,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"214","Sebastes eos","Pacific",0,0,0,0,1,0,0,-0.0752825444433268,-0.296747664455394,-0.285178498726015,-0.881169202077059,0,0.56,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"215","Farfantepenaeus duorarum","Gulf of Mexico",0,1,0,0,4,0,0,-0.0752710674053261,-0.296747664455394,-0.0209487090359625,0.15378826179036,0,0.269,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"216","Farfantepenaeus duorarum","South Atlantic",0,0,0,0,2,0,0,-0.0752710674053261,-0.296747664455394,-0.0209487090359625,0.15378826179036,0,0.269,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"217","Pollachius virens","New England",1,0,0,0,4,0,0,-0.0752603966325284,0.65955942036345,-0.113414341282047,-0.532519104203625,0,1.3,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"218","Lamna nasus","International, Atlantic",1,0,0,0,1,0,1,-0.0752825378579199,-0.296747664455394,-0.285149783728714,-0.550061322469078,0,3.5,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"219","Balistes vetula","Caribbean",0,1,0,0,4,0,0,-0.0752825376521238,-0.288267561921687,-0.285050337007211,0.098141212436374,0,0.6,1,NA,"reef-associated, piscivorous/omnivorous",9
+"220","Balistes vetula","Caribbean",0,1,0,0,4,0,0,-0.0752825376521238,-0.288267561921687,-0.285050337007211,0.098141212436374,0,0.6,1,NA,"reef-associated, piscivorous/omnivorous",9
+"221","Sebastes maliger","Pacific",0,1,1,1,4,1,1,-0.0752825261070787,-0.282370797008078,-0.284396602419803,1.08415259520796,0,0.61,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"222","Sebastes maliger","Pacific",0,1,1,1,4,1,0,-0.0752825261070787,-0.282370797008078,-0.284396602419803,1.08415259520796,0,0.61,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"223","Sebastes maliger","Pacific",0,1,1,1,4,1,0,-0.0752825261070787,-0.282370797008078,-0.284396602419803,1.08415259520796,0,0.61,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"224","Chaceon quinquedens","New England",0,0,0,0,2,0,0,-0.0752752718195022,-0.296747664455394,-0.211842766732076,-0.427771080995468,0,0.09,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"225","Sciaenops ocellatus","Gulf of Mexico",0,1,0,0,NA,0,0,-0.0752824678536483,9.18386642720549,-0.283622572468338,0.0436282628040459,0,1.55,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"226","Epinephelus morio","Gulf of Mexico",0,1,0,0,4,0,0,-0.0752768305672931,1.48161697069386,-0.121592929227204,0.405908395178254,0,1.25,1,0,"reef-associated, piscivorous/omnivorous",9
+"227","Epinephelus morio","South Atlantic",0,0,0,0,4,0,1,-0.0752821565901773,-0.0780270401563854,-0.273689523358209,0.452657908461279,0,1.25,1,0,"reef-associated, piscivorous/omnivorous",9
+"228","Urophycis chuss","New England",1,0,0,0,2,0,0,-0.0752805734853008,-0.290801764197774,-0.277782182510464,-0.712032928973935,0,0.66,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"229","Urophycis chuss","New England",1,0,0,0,2,0,1,-0.0752805734853008,-0.290801764197774,-0.277782182510464,-0.712032928973935,0,0.66,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"230","Epinephelus guttatus","Caribbean",0,0,0,0,1,0,0,-0.0752825270880303,-0.293537232334175,-0.284670755959378,0.485168186711239,0,0.76,1,NA,"reef-associated, piscivorous/omnivorous",9
+"231","Paralithodes camtschaticus","North Pacific",0,1,0,1,4,0,0,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.22,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"232","Paralithodes camtschaticus","North Pacific",0,1,0,1,4,0,0,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.22,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"233","Paralithodes camtschaticus","North Pacific",0,1,0,1,4,0,0,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.22,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"234","Paralithodes camtschaticus","North Pacific",0,1,0,1,1,0,0,-0.0752485371185019,-0.296747664455394,1.61672210472708,1.63278798022738,0,0.22,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"235","Pagrus pagrus","South Atlantic",0,1,0,0,4,0,1,-0.0752823288226314,-0.231686739692806,-0.281165575443765,-0.0404610745410417,0,0.91,1,0,"benthopelagic, piscivorous/omnivorous",3
+"236","Lutjanus campechanus","Gulf of Mexico",1,1,1,0,4,1,1,-0.0752771920321517,4.98326094800834,-0.0969927074191287,0.699427411176028,0,1,1,0,"reef-associated, piscivorous/omnivorous",9
+"237","Lutjanus campechanus","South Atlantic",0,1,0,0,4,0,1,-0.0752823249595194,0.453320232501331,-0.276270667751616,0.947231666614972,0,1,1,0,"reef-associated, piscivorous/omnivorous",9
+"238","Sebastes babcocki","Pacific",0,0,0,0,1,0,0,-0.075282415221825,-0.296747664455394,-0.284411125502125,-0.607346327678495,0,0.64,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"239","Sebastes proriger","Pacific",0,0,0,0,1,0,0,-0.0752824776631639,-0.296747664455394,-0.285118039251609,-0.827149841715105,0,0.61,1,1,"bathydemersal",1
+"240","Glyptocephalus zachirus","North Pacific",0,1,0,1,4,0,0,-0.0752683813894609,-0.296747664455394,-0.246465604981722,-0.758238962568268,0,0.6,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"241","Glyptocephalus zachirus","North Pacific",0,1,0,1,4,0,0,-0.0752683813894609,-0.296747664455394,-0.246465604981722,-0.758238962568268,0,0.6,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"242","Glyptocephalus zachirus","Pacific",0,0,1,0,4,1,0,-0.0752803663536091,-0.296747664455394,-0.276826526057818,-0.708394833860819,0,0.6,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"243","Lepidopsetta bilineata","North Pacific",1,0,0,0,4,0,0,-0.0751116947537414,-0.296747664455394,0.0365855302971508,-0.796507299879071,0,0.6,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"244","Lepidopsetta bilineata","Pacific",0,0,0,0,1,0,0,-0.0752824953959005,-0.295509344814192,-0.284947346691556,-0.651183655701824,0,0.58,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"245","Lepidopsetta bilineata","North Pacific",1,0,0,0,4,0,0,-0.0751116947537414,-0.296747664455394,0.0365855302971508,-0.796507299879071,0,0.58,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"246","Sebastes helvomaculatus","Pacific",0,0,0,0,1,0,0,-0.0752825242960912,-0.296747664455394,-0.285128105890401,-0.724576125347493,0,0.41,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"247","Leucoraja garmani","New England",0,1,0,0,2,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,0.57,0,0,"demersal/benthic, piscivorous/omnivorous",8
+"248","Sebastes rosaceus","Pacific",0,0,0,0,1,0,0,-0.0752825426717086,-0.290556066249383,-0.285158393041023,0.131173151767529,0,0.36,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"249","Aphareus rutilans","Western Pacific",0,0,0,0,4,0,0,-0.0752825270299858,-0.296747664455394,-0.284364952980937,1.27001462245628,0,1.1,1,NA,"reef-associated, piscivorous/omnivorous",9
+"250","Anoplopoma fimbria","North Pacific",0,0,0,0,4,0,0,-0.0752148287922355,-0.296747664455394,1.70551812931844,0.440303969483625,0,1.2,1,0,"bathydemersal",1
+"251","Anoplopoma fimbria","Pacific",0,0,1,0,4,1,0,-0.0752574235947536,-0.292678899920016,0.212448327873807,0.00931201444246868,0,1.2,1,0,"bathydemersal",1
+"252","Istiophorus platypterus","International, Atlantic",0,0,0,0,2,0,1,-0.0752825444433268,-0.220777733329835,-0.28519829181275,NA,0,3.48,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"253","Psettichthys melanostictus","Pacific",0,0,0,0,1,0,0,-0.0752822882640581,-0.296099020833812,-0.282799067063776,-0.460185811755901,0,0.63,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"254","Carcharhinus plumbeus","International, Atlantic",0,1,0,0,4,0,1,-0.0752804606292387,-0.186957655390393,-0.277210784028592,-0.708867195638158,0,3,1,0,"benthopelagic, piscivorous/omnivorous",3
+"255","Sphyrna lewini","International, Atlantic",0,0,0,0,2,0,1,-0.0752824858648455,-0.173364981570641,-0.284935010733924,-0.679137486922586,0,4.3,1,NA,"pelagic-oceanic, piscivorous/omnivorous",4
+"256","Mycteroperca phenax","Gulf of Mexico",0,1,0,0,4,0,0,-0.0752822899618588,-0.180335794179906,-0.276273225587548,0.695328333592551,0,1.07,1,0,"reef-associated, piscivorous/omnivorous",9
+"257","Mycteroperca phenax","South Atlantic",1,1,0,0,4,0,0,-0.075282154326443,-0.230359968648661,-0.269603628382831,0.915711604547892,0,1.07,1,0,"reef-associated, piscivorous/omnivorous",9
+"258","Stenotomus chrysops","Mid-Atlantic",0,1,0,0,4,0,0,-0.075270807659921,2.40219947734565,-0.202604107093568,-0.564840651912084,0,0.155,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"259","Placopecten magellanicus","New England",0,1,0,1,4,0,0,-0.075217363985895,-0.296747664455394,5.43156623878836,3.06132361332306,0,0.2,1,0,"demersal/benthic, planktivorous",7
+"260","Sebastes zacentrus","North Pacific",0,1,1,1,2,1,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,0.39,1,0,"bathydemersal",1
+"261","Sebastes zacentrus","Pacific",0,1,1,1,4,1,0,-0.0752824912455699,-0.296747664455394,-0.285085726953835,-0.786054528599402,0,0.39,1,0,"bathydemersal",1
+"262","Sebastes jordani","Pacific",0,0,0,0,4,0,0,-0.0752820309330629,-0.296747664455394,-0.285141679522673,-0.876213563729432,0,0.32,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"263","Isurus oxyrinchus","International, Atlantic",1,1,0,0,5,0,1,-0.0752821506128986,0.822628073023571,-0.280655391965303,-0.362653508909101,0,4.45,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"264","Isurus oxyrinchus","International, Pacific",1,1,0,0,5,0,0,-0.0752823305204322,-0.296747664455394,-0.283381567469142,-0.499427347200475,0,4.45,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"265","Sebastes borealis","North Pacific",0,1,0,1,2,0,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,1.08,1,0,"bathydemersal",1
+"266","Sebastes borealis","North Pacific",0,1,0,1,2,0,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,1.08,1,0,"bathydemersal",1
+"267","Sebastes borealis","Pacific",0,0,0,0,1,0,0,-0.075282474041189,-0.296747664455394,-0.284854413341874,-0.661607216238807,0,1.08,1,1,"bathydemersal",1
+"268","Sebastolobus alascanus","North Pacific",0,1,1,1,2,1,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,0.8,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"269","Sebastolobus alascanus","Pacific",0,1,1,0,4,1,0,-0.0752787685344563,-0.296747664455394,-0.233641916324162,-0.267408774114599,0,0.8,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"270","Carcharhinus falciformis","Western Pacific",0,1,0,0,4,0,0,-0.0752825444433268,-0.296747664455394,-0.285196649846709,-0.881169202077059,0,1,1,1,"reef-associated, piscivorous/omnivorous",9
+"271","Merluccius bilinearis","New England",1,0,0,0,2,0,0,-0.0752578638910817,-0.265774153152504,-0.133367992522103,-0.60463962766973,0,0.76,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"272","Merluccius bilinearis","New England",1,1,0,0,2,0,0,-0.0752578638910817,-0.265774153152504,-0.133367992522103,-0.60463962766973,0,0.76,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"273","Sebastes brevispinis","Pacific",0,0,0,0,1,0,0,-0.0752824636280111,-0.296561451018964,-0.284954743158375,-0.745703275917493,0,0.71,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"274","Katsuwonus pelamis","International, Pacific",1,1,1,0,4,2,0,-0.0752815511863558,-0.296747664455394,-0.270178243546651,-0.201421549106764,1,1.11,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"275","Katsuwonus pelamis","International, Pacific",0,1,1,0,4,1,0,-0.0752815511863558,-0.296747664455394,-0.270178243546651,-0.201421549106764,1,1.11,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"276","Katsuwonus pelamis","International, Atlantic",1,1,1,1,4,1,0,-0.075282528436311,-0.165602561926893,-0.285065417689793,-0.508032432122054,1,1.11,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"277","Mustelus canis","International, Atlantic",0,1,0,0,4,0,0,-0.0752794999017452,-0.162891561807251,-0.27103497998405,-0.672056257592939,0,1.5,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"278","Malacoraja senta","New England",0,1,0,0,2,0,0,-0.0752822085051515,-0.296747664455394,-0.284418181526984,-0.776785028924761,0,0.71,1,0,"bathydemersal",1
+"279","Chionoecetes opilio","North Pacific",0,0,0,0,4,0,1,-0.075200505529816,-0.296747664455394,1.50180499995798,0.0979677989787515,0,0.137,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"280","Epinephelus niveatus","South Atlantic",0,0,0,0,4,0,1,-0.0752822680790933,-0.270556225181776,-0.275810999100369,0.645681360795323,0,1.22,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"281","Chionoecetes bairdi","North Pacific",1,1,0,1,4,0,0,-0.0752730482664518,-0.296747664455394,-0.0484666942910657,0.239417447121247,0,0.15,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"282","Scomberomorus maculatus","Gulf of Mexico",0,0,0,0,4,0,0,-0.0752813790917572,3.44056980429712,-0.276381005442776,-0.541061872877368,1,0.91,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"283","Scomberomorus maculatus","Gulf of Mexico",0,1,0,0,4,0,0,-0.0752813790917572,3.44056980429712,-0.276381005442776,-0.541061872877368,1,0.91,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"284","Scomberomorus maculatus","South Atlantic",0,0,0,0,4,0,0,-0.0752757413557171,1.84564355484918,-0.219833524756042,-0.449276700253156,1,0.91,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"285","Ranina ranina","Western Pacific",0,0,0,0,2,0,0,-0.0752825259851857,-0.296747664455394,-0.284386007258169,1.09697634514814,0,0.15,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"286","Epinephelus drummondhayi","South Atlantic",0,0,0,0,1,0,0,-0.0752825444433268,-0.296600245450489,-0.285191551802787,-0.881169202077059,0,1.1,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"287","Sebastes ovalis","Pacific",0,0,0,0,1,0,0,-0.0752825425911805,-0.286754207950118,-0.285150310134065,0.283327237748943,0,0.56,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"288","Squalus acanthias","Joint Council Mgmt, Atlantic",0,1,0,0,4,0,0,-0.0752682815964906,-0.243725966289063,-0.254121134961226,-0.78322627669098,0,1.6,1,0,"bathydemersal",1
+"289","Squalus acanthias","Pacific",0,1,1,0,4,1,0,-0.0752804087986279,-0.293445478745522,-0.281861949457222,-0.810946163572101,0,1.6,1,0,"bathydemersal",1
+"290","Sebastes diploproa","Pacific",0,0,0,0,4,0,0,-0.075282126784342,-0.296747664455394,-0.284332806523752,-0.788020700693412,0,0.46,1,0,"bathydemersal",1
+"291","Lethrinus rubrioperculatus","Western Pacific",0,0,0,0,4,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,0.57,1,NA,"reef-associated, piscivorous/omnivorous",9
+"292","Sebastes hopkinsi","Pacific",0,0,1,0,4,1,0,-0.0752825441414955,-0.285388642120642,-0.285183886726215,1.26413886318776,0,0.29,1,0,"reef-associated, piscivorous/omnivorous",9
+"293","Platichthys stellatus","Pacific",0,0,0,0,1,0,0,-0.0752823471211508,-0.295627280018116,-0.284158021813261,-0.644191115751831,0,0.91,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"294","Platichthys stellatus","Pacific",0,0,0,0,1,0,0,-0.0752823471211508,-0.295627280018116,-0.284158021813261,-0.644191115751831,0,0.91,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"295","Sebastes constellatus","Pacific",0,0,0,0,1,0,0,-0.0752825397272136,-0.265153448380732,-0.285072641466678,0.316446488610552,0,0.46,1,1,"reef-associated, piscivorous/omnivorous",9
+"296","Kajikia audax","International, Pacific",1,1,1,0,4,1,0,-0.0752805931043302,-0.274575846117679,-0.257037227694262,-0.232453592994425,0,4.2,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"297","Kajikia audax","International, Pacific",0,1,0,0,4,0,0,-0.0752805931043302,-0.274575846117679,-0.257037227694262,-0.232453592994425,0,4.2,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"298","Sebastes saxicola","Pacific",0,0,0,0,4,0,0,-0.0752825337904593,-0.296747664455394,-0.285178408304615,-0.797268712060601,0,0.38,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"299","Paralichthys dentatus","Mid-Atlantic",0,1,0,0,4,0,0,-0.0752706358801988,6.07814154363228,-0.024700631965606,0.102122724224847,0,0.94,0,0,"demersal/benthic, piscivorous/omnivorous",8
+"300","Xiphias gladius","International, Pacific",1,1,1,0,5,1,0,-0.0752786368895984,-0.296747664455394,-0.18132847721228,0.313705615902308,0,4.55,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"301","Xiphias gladius","International, Atlantic",1,1,1,1,4,1,0,-0.075276195154315,0.179084748031518,-0.0882612197581631,0.513079956171767,0,4.55,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"302","Xiphias gladius","International, Pacific",1,1,1,0,4,1,0,-0.0752786368895984,-0.296747664455394,-0.18132847721228,0.313705615902308,0,4.55,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"303","Sebastes ensifer","Pacific",0,0,0,0,1,0,0,-0.0752825444433268,-0.295840470542768,-0.28519829181275,NA,0,0.3,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"304","Amblyraja radiata","New England",0,1,0,0,2,0,1,-0.0752825444433268,-0.294388960376914,-0.285078998740231,-0.881169202077059,0,1.05,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"305","Alopias vulpinus","International, Pacific",1,1,1,0,4,1,0,-0.075282510163921,-0.296747664455394,-0.285070487080223,-0.713577828235783,0,5.73,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"306","Sebastes nigrocinctus","Pacific",0,0,0,0,1,0,0,-0.0752825442169534,-0.295287514592371,-0.285154254284721,7.86334092131962,0,0.61,1,1,"reef-associated, piscivorous/omnivorous",9
+"307","Lopholatilus chamaeleonticeps","Gulf of Mexico",1,1,1,0,4,1,0,-0.0752821394235255,-0.265691398019911,-0.276031170289984,0.136237847662751,0,1.25,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"308","Lopholatilus chamaeleonticeps","Mid-Atlantic",0,1,0,0,4,0,0,-0.0752792791951949,-0.0852505713967312,-0.19354592672347,0.380558089199136,0,1.25,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"309","Lopholatilus chamaeleonticeps","South Atlantic",0,0,0,0,4,0,0,-0.0752817259147187,-0.25598310176161,-0.260965872695135,0.449594416254083,0,1.25,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"310","Galeorhinus galeus","Pacific",0,0,0,0,1,0,0,-0.0752824755880743,-0.296157988435774,-0.284721612086975,-0.569977781160855,0,1.93,1,1,"benthopelagic, piscivorous/omnivorous",3
+"311","Sebastes serriceps","Pacific",0,0,0,0,1,0,0,-0.0752825367089012,-0.287126634351237,-0.284589575189073,2.65656422111403,0,0.41,1,1,"demersal/benthic, piscivorous/omnivorous",8
+"312","Sebastes miniatus","Pacific",1,1,1,1,4,1,0,-0.0752823774929196,-0.0460511503812637,-0.28083697868889,0.293100338666363,0,0.91,1,1,"reef-associated, piscivorous/omnivorous",9
+"313","Sebastes miniatus","Pacific",1,1,1,1,4,1,0,-0.0752823774929196,-0.0460511503812637,-0.28083697868889,0.293100338666363,0,0.91,1,1,"reef-associated, piscivorous/omnivorous",9
+"314","Sebastes miniatus and S. crocotulus","Pacific",1,1,1,1,4,1,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,0.91,1,1,"reef-associated, piscivorous/omnivorous",9
+"315","Sebastes miniatus and S. crocotulus","Pacific",1,1,1,1,4,1,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,0.91,1,1,"reef-associated, piscivorous/omnivorous",9
+"316","Rhomboplites aurorubens","Gulf of Mexico",1,1,1,0,4,1,0,-0.0752806795978477,0.346539693970063,-0.238337632735924,0.24837583229928,1,0.6,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"317","Rhomboplites aurorubens","South Atlantic",0,1,0,0,4,0,0,-0.0752806308332343,-0.0224991363520265,-0.224901970310848,0.535196414505072,1,0.6,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"318","Acanthocybium solandri","South Atlantic",0,0,0,0,NA,0,0,-0.0752824567236213,-0.273897718695116,-0.282396058604808,0.55479998451028,0,2.5,1,NA,"pelagic-oceanic, piscivorous/omnivorous",4
+"319","Gadus chalcogrammus","North Pacific",0,1,0,0,4,0,0,-0.0690635366928145,-0.296747664455394,6.91081660527289,-0.829156553914091,0,0.91,1,0,"benthopelagic, piscivorous/omnivorous",3
+"320","Gadus chalcogrammus","North Pacific",0,1,0,0,2,0,0,-0.0690635366928145,-0.296747664455394,6.91081660527289,-0.829156553914091,0,0.91,1,0,"benthopelagic, piscivorous/omnivorous",3
+"321","Gadus chalcogrammus","North Pacific",0,1,0,0,4,0,0,-0.0690635366928145,-0.296747664455394,6.91081660527289,-0.829156553914091,0,0.91,1,0,"benthopelagic, piscivorous/omnivorous",3
+"322","Gadus chalcogrammus","North Pacific",1,1,1,1,4,1,0,-0.0690635366928145,-0.296747664455394,6.91081660527289,-0.829156553914091,0,0.91,1,0,"benthopelagic, piscivorous/omnivorous",3
+"323","Gadus chalcogrammus","North Pacific",1,1,1,1,4,1,0,-0.0690635366928145,-0.296747664455394,6.91081660527289,-0.829156553914091,0,0.91,1,0,"benthopelagic, piscivorous/omnivorous",3
+"324","Epinephelus nigritus","South Atlantic",0,0,0,0,NA,0,0,-0.0752825444433268,-0.276698679788312,-0.285184493801971,-0.881169202077059,0,2.3,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"325","Patinopecten caurinus","North Pacific",0,0,0,0,2,0,0,-0.0752819612487688,-0.296747664455394,-0.237312728823645,2.80970416774597,0,0.28,1,0,"demersal/benthic, planktivorous",7
+"326","Haemulon plumierii","South Atlantic",0,0,0,0,NA,0,0,-0.0752825057711986,-0.0975845888287163,-0.284688564206427,-0.288683202763738,1,0.53,1,NA,"reef-associated, piscivorous/omnivorous",9
+"327","Urophycis tenuis","New England",0,0,0,0,4,0,1,-0.0752725923125977,-0.285928391451032,-0.188724526124284,-0.445425449826174,0,1.33,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"328","Kajikia albida","International, Atlantic",0,0,0,0,4,0,1,-0.0752825444433268,-0.250163258905409,-0.28519829181275,NA,0,3,1,1,"pelagic-oceanic, piscivorous/omnivorous",4
+"329","Litopenaeus setiferus","Gulf of Mexico",0,1,0,0,4,0,0,-0.0751813565553503,-0.296747664455394,1.66370557136337,-0.0154044598482549,0,0.224,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"330","Litopenaeus setiferus","South Atlantic",0,0,0,0,2,0,0,-0.0752551896677784,-0.296747664455394,0.406841921933138,0.256029057071633,0,0.224,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"331","Sebastes entomelas","Pacific",0,1,0,0,4,0,0,-0.0752676983076254,-0.285366917276727,-0.247946277776808,-0.768378229309771,1,0.6,1,0,"pelagic-neritic, piscivorous/omnivorous",6
+"332","Scophthalmus aquosus","New England",0,0,0,0,2,0,1,-0.0752823961687279,-0.296747664455394,-0.284540251090015,-0.681677873369745,0,0.457,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"333","Scophthalmus aquosus","New England",0,0,0,0,2,0,0,-0.0752823961687279,-0.296747664455394,-0.284540251090015,-0.681677873369745,0,0.457,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"334","Pseudopleuronectes americanus","New England",1,0,0,0,3,0,1,-0.0752718222656499,-0.164955074070309,-0.110164119803195,-0.147368952536169,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"335","Pseudopleuronectes americanus","New England",0,0,0,0,2,0,0,-0.0752718222656499,-0.164955074070309,-0.110164119803195,-0.147368952536169,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"336","Pseudopleuronectes americanus","New England",1,1,0,0,4,0,0,-0.0752718222656499,-0.164955074070309,-0.110164119803195,-0.147368952536169,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"337","Leucoraja ocellata","New England",0,1,0,0,2,0,0,-0.0752598924523044,-0.294074466495852,-0.233463826735803,-0.7785067596343,0,1.13,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"338","Glyptocephalus cynoglossus","New England",0,0,0,0,2,0,1,-0.0752766213824397,-0.296747664455394,-0.178395124711499,-0.0706264167432888,0,0.6,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"339","Polyprion americanus","South Atlantic",0,0,0,0,4,0,0,-0.0752822377073244,-0.296747664455394,-0.275916814087189,0.478992003592153,0,2.1,1,NA,"demersal/benthic, piscivorous/omnivorous",8
+"340","Variola louti","Western Pacific",0,0,0,0,4,0,0,-0.0752825444433268,-0.296747664455394,-0.28519829181275,NA,0,0.83,1,NA,"reef-associated, piscivorous/omnivorous",9
+"341","Epinephelus flavolimbatus","Gulf of Mexico",1,1,1,0,4,1,0,-0.0752816578140472,-0.296747664455394,-0.253817596716707,0.709788012141779,0,1.15,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"342","Epinephelus flavolimbatus","South Atlantic",0,0,0,0,NA,0,0,-0.0752825146374914,-0.292099629913114,-0.283961278449633,0.984398879874655,0,1.15,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"343","Sebastes ruberrimus","North Pacific",1,1,1,1,2,1,0,-0.075223966355878,-0.296747664455394,-0.136974113656133,-0.767426936829348,0,1.04,1,0,"reef-associated, piscivorous/omnivorous",9
+"344","Sebastes ruberrimus","Pacific",0,1,1,1,4,1,1,-0.0752825346338113,-0.295175588187087,-0.285091288947671,-0.390842143442959,0,1.04,1,0,"reef-associated, piscivorous/omnivorous",9
+"345","Limanda aspera","North Pacific",0,1,1,0,4,1,0,-0.0747739408733625,-0.296747664455394,0.454081581516609,-0.815830953497622,0,0.49,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"346","Thunnus albacares","International, Pacific",1,1,1,0,4,2,0,-0.0752718216561621,-0.296747664455394,0.0475877990158163,0.513899162811986,1,2.39,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"347","Thunnus albacares","International, Pacific",0,1,1,0,NA,1,0,-0.0752718216561621,-0.296747664455394,0.0475877990158163,0.513899162811986,1,2.39,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"348","Thunnus albacares","International, Atlantic",0,1,1,0,4,1,0,-0.075279447744129,5.0910781369821,-0.12374519620684,1.46244091954014,1,2.39,1,0,"pelagic-oceanic, piscivorous/omnivorous",4
+"349","Sebastes reedi","Pacific",0,0,0,0,1,0,0,-0.0752824941884246,-0.296747664455394,-0.285066669531592,-0.763438701354124,0,0.58,1,1,"bathydemersal",1
+"350","Limanda ferruginea","New England",1,0,0,0,3,0,0,-0.0752721623917337,-0.295804182824002,-0.15090206895916,-0.299710833295754,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"351","Limanda ferruginea","New England",0,1,0,0,2,0,1,-0.0752721623917337,-0.295804182824002,-0.15090206895916,-0.299710833295754,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"352","Limanda ferruginea","New England",1,0,0,0,4,0,1,-0.0752721623917337,-0.295804182824002,-0.15090206895916,-0.299710833295754,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"353","Sebastes flavidus","Pacific",1,1,1,1,4,1,0,-0.0752748088858307,-0.168647568696272,-0.257830914596308,-0.722139014905384,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"354","Sebastes flavidus","Pacific",1,1,1,1,4,1,0,-0.0752748088858307,-0.168647568696272,-0.257830914596308,-0.722139014905384,0,0.64,1,0,"demersal/benthic, piscivorous/omnivorous",8
+"355","Ocyurus chrysurus","South Atlantic",0,1,0,0,4,0,0,-0.0752823422163927,-0.0610738545923085,-0.279003460339849,0.495813576554084,1,0.863,1,0,"reef-associated, piscivorous/omnivorous",9

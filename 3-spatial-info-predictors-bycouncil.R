@@ -4,7 +4,7 @@
 
 # Quantify spatial information in US marine stocks, by Councils
 
-# last updated 13 February 2025
+# last updated 20 February 2025
 ###############################################
 ###############################################
 
@@ -16,49 +16,40 @@ library(corrplot)
 
 #####---- Data preparation
 #####
-# Use "predictors" csv since it was cleaned in "summary-spatial-info-in-stock-assessments.R"
-si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/4-US Marine Fisheries Stocks and Assessments-predictors_20250130.csv", header = TRUE, na.strings = c(""))
-str(si)
+# Use "5-US Marine Fisheries Stocks and Assessments-predictors-byCouncil_20250130") csv since it was cleaned in "2-spatial-info-predictors-national.R"
+sic <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/5-US Marine Fisheries Stocks and Assessments-predictors-byCouncil_20250130", header = TRUE, na.strings = c(""))
+str(sic)
 
-si$Assessment.Model.Type <- as.numeric(si$Assessment.Model.Type)
-si$Rebuilding.Program.Status <- as.numeric(si$Rebuilding.Program.Status)
-si$SI.stock.boundaries <- as.numeric(si$SI.stock.boundaries)
-si$SI.data.prep <- as.numeric(si$SI.data.prep)
-si$SI.model <- as.numeric(si$SI.sci.advice)
-si$SI.other <- as.numeric(si$SI.other)
-si$Ave.Metric.Tons_Commercial <- as.numeric(si$Ave.Metric.Tons_Commercial)
-si$Ave.Metric.Tons_Recreational <- as.numeric(si$Ave.Metric.Tons_Recreational)
-si$Ave.Dollars.Adj_Commercial <- as.numeric(si$Ave.Dollars.Adj_Commercial)
-si$Schooling <- as.numeric(si$Schooling)
-si$Max.Length.m <- as.numeric(si$Max.Length.m)
-si$Transboundary <- as.numeric(si$Transboundary)
-si$Fisheries.Dep.Only <- as.numeric(si$Fisheries.Dep.Only)
-si$PerTon_Ave.Dollars.Adj_Commercial <- as.numeric(si$PerTon_Ave.Dollars.Adj_Commercial)
-
-summary(si)
-
-
-#---- For analyses with landings volume and value, there are duplicates by species and unavailability for multi-species complexes
-# Drop duplicate assessments for the same species and multispecies complexes
-si.2 <- distinct(si, pick(Common.Name, Council.Abbv, SI.data.prep, SI.model, SI.other, Assessment.Model.Type, Ave.Metric.Tons_Commercial, Ave.Metric.Tons_Recreational, Ave.Dollars.Adj_Commercial, Ecological, Schooling, Max.Length.m), .keep_all = TRUE)
-
-# Drop multispecies complexes
-si.2 <- filter(si.2, !Common.Name == "Multispecies Complex")
-
-# Scale the averages
-si.2$PerTon_Ave.Dollars.Adj_Commercial <- scale(si.2$PerTon_Ave.Dollars.Adj_Commercial)
+sic <- sic |> 
+  mutate_at(c("SI.stock.boundaries",
+            "SI.data.prep",
+            "SI.model",
+            "SI.sci.advice",
+            "Assessment.Model.Type",
+            "Spatially.Explict.Implict",
+            "Rebuilding.Program.Status",
+            "Ave.Metric.Tons_Commercial",
+            "Ave.Metric.Tons_Recreational",
+            "Ave.Dollars.Adj_Commercial",
+            "PerTon_Ave.Dollars.Adj_Commercial",
+            "Schooling",
+            "Max.Length.m",
+            "Transboundary",
+            "Fisheries.Dep.Only",
+            "Ecological.Num"), 
+          as.numeric)
+# Warning about coercion is ok
 
 
 # Group by council and convert counts to proportions
-by.council <- si.2 %>%
-  group_by(Council.Abbv) %>%
+by.council <- sic %>%
+  group_by(Mgmt.Council) %>%
   summarize(n.Assessments = n(),
             n.Species = n_distinct(Scientific.Name),
             boundaries.Y = sum(SI.stock.boundaries == 1, na.rm = TRUE),
             dataprep.Y = sum(SI.data.prep == 1, na.rm = TRUE),
             model.Y = sum(SI.model == 1, na.rm = TRUE),
             sciadv.Y = sum(SI.sci.advice == 1, na.rm = TRUE),
-            other.Y = sum(SI.other == 1, na.rm = TRUE),
             n.SpImplicit = sum(Spatially.Explict.Implict == 1, na.rm = TRUE),
             n.SpExplicit = sum(Spatially.Explict.Implict == 2, na.rm = TRUE),
             rebuild.Y = sum(Rebuilding.Program.Status == 1, na.rm = TRUE),
@@ -99,21 +90,64 @@ by.council <- si.2 %>%
          prop.Fisheries.Dep.Only = Fisheries.Dep.Only/n.Assessments
   )
 
-#Change NA to 0
-by.council[14, 13] <- 0
-
-
 
 #####---- Correlation
 c <- cor(by.council[sapply(by.council, is.numeric)])
-corrplot(c[c(28:33), 
-           c(10:14, 34:44)], method = 'color')
+# Plot the proportional values only
+corrplot(c[c(27:32), 
+           c(33:43)], method = 'color')
 
+# High positive correlation between Bathydemersal fisheries and Sci.Advice
+# High positive correlation between Pelagic and use in all stages
+# High negative correlation between reef-associated in all stages
+# Positive correlation between schooling and Data.Prep
+# Positive correlation between FisheriesDep only and model
+
+# Conclude: regional management is the biggest influence on the use of spatial information
 
 #-----
 # Bar graph of tons of commercial, tons of recreational, and order councils large to small left to right
-ggplot(by.council, aes(y = Ave.Dollars.Adj_Commercial, x = Council.Abbv, )) +
+ggplot(by.council, aes(y = Ave.Dollars.Adj_Commercial, x = Mgmt.Council, )) +
   geom_point()
+
+
+
+
+
+#######----- Predicting factors on use of spatial info BY COUNCIL REGION with a Binomial Logistic Regression or Poisson with random intercepts (for Councils)
+# Convert to factors
+sip$Ecological <- as.factor((sip$Ecological))
+sip$Mgmt.Council <- as.factor(sip$Mgmt.Council)
+
+# Hypotheses: Factors that drive stock assessments to incorporate spatial info differ for each region...
+
+##-- H1. If catch-only data is only available (**Fisheries.Dep.Only**), spatial info is LESS LIKELY to be used in data prep or more advanced model types 
+h1 <- lmer(SI.data.prep ~ Assessment.Model.Type + (1 | Mgmt.Council), data = sip)
+summary(h1)
+confint(h1)
+ranef(h1)$Mgmt.Council
+
+##-- H2. If the fishery is in rebuilding status (**Rebuilding.Program.Status**), spatial info is MORE LIKELY to be used in data prep or more advanced model types 
+h2 <- lmer(SI.data.prep ~ Rebuilding.Program.Status + (1 | Mgmt.Council), data = sip)
+summary(h2)
+
+##-- H3. If the species is pelagic-oceanic, piscivorous/omnivorous or pelagic-neritic, piscivorous/omnivorous (**Ecological**), spatial info is MORE LIKELY to be used in data prep or more advanced model types (following Neubauer et al. 2018)
+h3 <- lmer(SI.data.prep ~ Ecological + (1|Mgmt.Council), data = sip)
+summary(h3)
+
+##-- H4. If the species is larger-sized (**Max.Length.m**), spatial info is MORE LIKELY to be used in data prep or more advanced model types
+h4 <- lmer(SI.data.prep ~ Max.Length.m + (1|Mgmt.Council), data = sip)
+summary(h4)
+
+##-- H5. If the total commercial value or per ton value is high (**Ave.Metric.Tons_Commercial; PerTon_Ave.Dollars.Adj_Commercial**), spatial info is MORE LIKELY to be used in data prep or more advanced model types
+h5 <- lmer(SI.data.prep ~ PerTon_Ave.Dollars.Adj_Commercial + (1|Mgmt.Council), data = sip)
+summary(h5)
+
+##-- H6. If the recreational catch is high (**Ave.Metric.Tons_Recreational**), spatial info is MORE LIKELY to be used in data prep or more advanced model types
+h6 <- lmer(SI.data.prep ~ Ave.Metric.Tons_Recreational + (1|Mgmt.Council), data = sip)
+summary(h6)
+
+
 
 
 

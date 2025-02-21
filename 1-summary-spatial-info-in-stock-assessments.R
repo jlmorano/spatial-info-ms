@@ -22,6 +22,7 @@ library(cowplot)
 
 
 #----- Data Preparation
+######
 si <- read.csv("/Users/janellemorano/Git/spatial-info-ms/data/3-US Marine Fisheries Stocks and Assessments-forR_20250130.csv", header = TRUE, na.strings = c(""))
 str(si)
 colnames(si)
@@ -80,8 +81,9 @@ si <- si |>
          )
 
 
-
-#----- Overall stats
+######
+#----- Overall stats (Table 1)
+######
 metrics <- data.frame("Summary" = c("Species.with.Assessments", "Multispecies.Stocks", "Species.with.Multiple.Assessments", "Total.Assessments", "Total.WithAnySpatial"), "Total" = 0)
 
 # Species with Assessments
@@ -116,7 +118,11 @@ si |> count(si$SI.model == 1)
 si |> count(si$SI.sci.advice == 1)
 
 
-#----- Other summaries
+
+
+######
+#----- Other summaries (SuppTable 2)
+######
 # Species managed by different jurisdictions
 multi <- si |>
   select(Common.Name, Council.Abbv) |>
@@ -131,8 +137,12 @@ multi <- si |>
 # write.csv(si, "/Users/janellemorano/Git/spatial-info-ms/data/4-US Marine Fisheries Stocks and Assessments-predictors_20250130.csv")
 
 
-#----- Stock Characteristics by Councils (Mgmt.Council)
-by.council <- si %>%
+
+######
+#----- Stock Characteristics by Councils (Mgmt.Council) (SuppTable 3)
+######
+# Data by assessment
+by.council.asmt <- si %>%
   group_by(Mgmt.Council) %>%
   summarize(n.Assessments = n(),
             n.Species = n_distinct(Scientific.Name),
@@ -140,9 +150,13 @@ by.council <- si %>%
             dataprep.Y = sum(SI.data.prep == 1, na.rm = TRUE),
             model.Y = sum(SI.model == 1, na.rm = TRUE),
             sciadv.Y = sum(SI.sci.advice == 1, na.rm = TRUE),
-            other.Y = sum(SI.other == 1, na.rm = TRUE),
-            n.SpImplicit = sum(Spatially.Explict.Implict == 1, na.rm = TRUE),
-            n.SpExplicit = sum(Spatially.Explict.Implict == 2, na.rm = TRUE),
+            other.Y = sum(SI.other == 1, na.rm = TRUE)
+  )
+# Data by species (because some is duplicated by assessment)
+by.council.sp <- si %>%
+  distinct(Scientific.Name, Council.Abbv, .keep_all = TRUE) |> #Remove duplicate species info
+  group_by(Mgmt.Council) %>%
+  summarize(n.Species2 = n(),
             rebuild.Y = sum(Rebuilding.Program.Status == 1, na.rm = TRUE),
             Ave.Metric.Tons_Commercial = mean(Ave.Metric.Tons_Commercial, na.rm = TRUE),
             Ave.Metric.Tons_Recreational = mean(Ave.Metric.Tons_Recreational, na.rm = TRUE),
@@ -161,21 +175,55 @@ by.council <- si %>%
             Transboundary = sum(Transboundary == 1, na.rm = TRUE),
             MaxSize = mean(Max.Length.m, na.rm = TRUE),
             Fisheries.Dep.Only = sum(Fisheries.Dep.Only == 1, na.rm = TRUE)
-            )
+  )
+
+# Combine
+by.council <- cbind(by.council.asmt, by.council.sp)
+by.council <- by.council[, -(9:10)]
 
 print(by.council)
+
 # Write to .csv
-# write.csv(by.council, "/Users/janellemorano/Git/spatial-info-ms/data/summary-by-Council.csv")
+# write.csv(by.council, "/Users/janellemorano/Git/spatial-info-ms/data/summary-by-Council.csv")  
 
 
 
-#----- Fisheries-Dependent data only
+
+######
+#----- Ecological Type by Council
+######
+eco.stack <- by.council %>%
+  select(Mgmt.Council, Eco.Bathy, Eco.BenthPlank, Eco.BenthPisc, Eco.PelagBenthPlank, Eco.PelagBenthPisc, Eco.PelagOceanPisc, Eco.PelagNeritPlank, Eco.PelagNeritPisc, Eco.Reef) |>
+  pivot_longer(cols = Eco.Bathy: Eco.Reef,
+               names_to = c("Ecology"),
+               values_to = "Total") |>
+  mutate(Ecology = factor(Ecology, levels=c("Eco.PelagOceanPisc", "Eco.PelagNeritPisc", "Eco.PelagNeritPlank", "Eco.Reef", "Eco.PelagBenthPisc", "Eco.PelagBenthPlank", "Eco.BenthPisc", "Eco.BenthPlank", "Eco.Bathy"))) |>
+  mutate(Mgmt.Council = factor(Mgmt.Council, levels=c("Caribbean", "Joint Council Mgmt, Atlantic", "Mid-Atlantic", "Western Pacific", "International, Pacific", "Gulf of Mexico", "International, Atlantic", "New England", "South Atlantic", "North Pacific", "Pacific")))
+
+purptang = c("#420F75FF", "#7640A9FF", "#AD72D6FF", "#E7A8FBFF", "#dcdce5", "#F8B150FF", "#C17D17FF", "#8A4D00FF", "#552000FF") ##F3F3F3FF
+ggplot(data = eco.stack, aes(x = Mgmt.Council, y = Total, fill = Ecology)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = purptang) +
+  ylab("Number of Species Assessed") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.95)) +
+  theme(panel.background = element_blank()) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
+  theme(axis.line = element_line(colour = "black")) +
+  theme(axis.title.x = element_blank()) +
+  theme(text = element_text(size = 14)) 
+# save 800x600
+
+
+######
+#----- Fisheries-Dependent data only (Figure 3)
+######
 by.council$Prop.FishDepOnly <- by.council$Fisheries.Dep.Only/by.council$n.Assessments
 by.council$Prop.DataPrep <- by.council$dataprep.Y/by.council$n.Assessments
 by.council$Prop.Model <- by.council$model.Y/by.council$n.Assessments
 
 by.council <- by.council |> mutate(Mgmt.Council = fct_reorder(Mgmt.Council, Prop.FishDepOnly))
 
+# Panel A
 ggplot(by.council, aes(Mgmt.Council, Prop.FishDepOnly, fill = Mgmt.Council)) +
   geom_bar(stat = 'identity') +
   scale_fill_viridis_d() +
@@ -187,8 +235,9 @@ ggplot(by.council, aes(Mgmt.Council, Prop.FishDepOnly, fill = Mgmt.Council)) +
   theme(text = element_text(size = 14)) +
   ylab("Proportion of Species with Fisheries-Dependent Data Only") +
   theme(legend.position="none")
-  
+# save 800x600
 
+# Panel B
 ggplot(by.council, aes(Prop.FishDepOnly, Prop.DataPrep, color = Mgmt.Council)) +
   scale_color_viridis_d() +
   geom_point(size = 4) +
@@ -201,6 +250,8 @@ ggplot(by.council, aes(Prop.FishDepOnly, Prop.DataPrep, color = Mgmt.Council)) +
   ylab("Prop. Spatial in Data Preparation") +
   xlab("Prop. Assessments with Fisheries-Dependent Data Only")
 # save 750x500
+
+# Panel C
 ggplot(by.council, aes(Prop.FishDepOnly, Prop.Model, color = Mgmt.Council)) +
   scale_color_viridis_d() +
   geom_point(size = 4) +
@@ -312,7 +363,7 @@ si.council.stack <- si.council %>%
 # Graph by Region
 names <- unique(si.council.stack$Mgmt.Council)
 
-# not drawing x axis or legend
+# without drawing x axis or legend
 for (z in 1:length(unique(names))) {
   print(
     ggplot(data = subset(si.council.stack, Mgmt.Council %in% names[z]), aes(x = Step, y = Total, fill = Response)) +
