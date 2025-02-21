@@ -97,8 +97,10 @@ sip$PerTon_Ave.Dollars.Adj_Commercial <- scale(sip$PerTon_Ave.Dollars.Adj_Commer
 
 # Drop character categories of Scientific.Name, Mgmt.Council, Ecological
 sip.pca <- select(sip, -c("Scientific.Name", "Mgmt.Council", "Ecological"))
-# Convert NAs to zeros
-sip.pca[is.na(sip.pca)] <- 0
+# Drop rows with NAs
+sip.pca <- drop_na(sip.pca)
+# # Convert NAs to zeros
+# sip.pca[is.na(sip.pca)] <- 0
 
 # Conduct a PCA on the covariance matrix (prcomp()) on the sip.pca data
 pca <- prcomp(sip.pca, center= TRUE, scale= TRUE)
@@ -465,7 +467,7 @@ plot(fitted(n10), n10.res, main = "Binomial")
 
 sip$Mgmt.Council <- as.factor(sip$Mgmt.Council)
 
-## SIGNIFICANT for NATIONAL 1. Assessment.Model.Type
+## Assessment.Model.Type
 o1 <- glm(SI.data.prep ~ as.factor(Assessment.Model.Type) + as.factor(Mgmt.Council), data = sip, family = binomial)
 summary(o1)
 summary(o1)$coefficients
@@ -483,10 +485,24 @@ ggplot() +
   theme_classic()
 
 
-
-
 ## Ecological
 ## Ecologicalpelagic-oceanic, piscivorous/omnivorous Positively Significant
 o2 <- glm(SI.data.prep ~ as.factor(Ecological) + as.factor(Mgmt.Council), data = sip, family = binomial)
 summary(o2)
 
+## Max.Length.m
+o3 <- glm(SI.data.prep ~ Max.Length.m + as.factor(Mgmt.Council), data = sip, family = gaussian)
+summary(o3)
+summary(o3)$coefficients
+newdata <- data.frame()
+for (i in unique(sip$Mgmt.Council)) {
+  new <- data.frame(Mgmt.Council = i,
+                    Max.Length.m = median(sip$Max.Length.m[sip$Mgmt.Council == i], na.rm=TRUE))
+  newdata <- rbind(newdata, new)
+}
+pred.o3 <- predict(o3, newdata = newdata, type = "response", se.fit = TRUE)
+pred.o3.df <- cbind(newdata, pred.o3)
+ggplot() +
+  geom_point(data = pred.o3.df, aes(x = Max.Length.m, y = fit, color = Mgmt.Council)) +
+  # geom_errorbar(data = pred.o1.df, aes(x=Ecological.Num, ymin=probability-se, ymax=probability+se), width = 0.3) +
+  theme_classic()
