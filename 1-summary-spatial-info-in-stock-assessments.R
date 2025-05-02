@@ -6,7 +6,7 @@
 # First step in analysis to generate information for tables and figures 
 # illustrating characteristics of species in the assessment database
 
-# last updated 17 February 2025
+# last updated 1 May 2025
 ###############################################
 ###############################################
 
@@ -197,11 +197,19 @@ eco.stack <- by.council %>%
   pivot_longer(cols = Eco.Bathy: Eco.Reef,
                names_to = c("Ecology"),
                values_to = "Total") |>
-  mutate(Ecology = factor(Ecology, levels=c("Eco.PelagOceanPisc", "Eco.PelagNeritPisc", "Eco.PelagNeritPlank", "Eco.Reef", "Eco.PelagBenthPisc", "Eco.PelagBenthPlank", "Eco.BenthPisc", "Eco.BenthPlank", "Eco.Bathy"))) |>
-  mutate(Mgmt.Council = factor(Mgmt.Council, levels=c("Caribbean", "Joint Council Mgmt, Atlantic", "Mid-Atlantic", "Western Pacific", "International, Pacific", "Gulf of Mexico", "International, Atlantic", "New England", "South Atlantic", "North Pacific", "Pacific")))
+  mutate(Ecology = factor(Ecology, levels=c("Eco.PelagOceanPisc", "Eco.PelagNeritPisc", "Eco.PelagNeritPlank", "Eco.Reef", "Eco.PelagBenthPisc", "Eco.PelagBenthPlank", "Eco.BenthPisc", "Eco.BenthPlank", "Eco.Bathy")),
+         Mgmt.Council = factor(Mgmt.Council, levels=c("Caribbean", "Joint Council Mgmt, Atlantic", "Mid-Atlantic", "Western Pacific", "International, Pacific", "Gulf of Mexico", "International, Atlantic", "New England", "South Atlantic", "North Pacific", "Pacific")),
+         Habitat.Group = factor(case_when(Ecology %in% c("Eco.Bathy") ~ "Bathypelagic",
+                                          Ecology %in% c("Eco.BenthPlank", "Eco.BenthPisc", "Eco.PelagBenthPlank", "Eco.PelagBenthPisc") ~ "Benthic",
+                                          Ecology %in% c("Eco.PelagOceanPisc") ~ "Pelagic",
+                                          Ecology %in% c("Eco.PelagNeritPisc", "Eco.PelagNeritPlank") ~ "Coastal",
+                                          Ecology == "Eco.Reef" ~ "Reef"), 
+         levels = c("Pelagic", "Coastal", "Reef", "Benthic", "Bathypelagic"))
+)
 
-purptang = c("#420F75FF", "#7640A9FF", "#AD72D6FF", "#E7A8FBFF", "#dcdce5", "#F8B150FF", "#C17D17FF", "#8A4D00FF", "#552000FF") ##F3F3F3FF
-ggplot(data = eco.stack, aes(x = Mgmt.Council, y = Total, fill = Ecology)) +
+
+purptang = c("#E66101", "#FDB863", "#FEE0B6", "#B2ABD2", "#5E3C99") #brewer.pal(n = 5, name = 'PuOr')
+ggplot(data = eco.stack, aes(x = Mgmt.Council, y = Total, fill = Habitat.Group)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = purptang) +
   ylab("Number of Species Assessed") +
@@ -211,7 +219,7 @@ ggplot(data = eco.stack, aes(x = Mgmt.Council, y = Total, fill = Ecology)) +
   theme(axis.line = element_line(colour = "black")) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) 
-# save 800x600
+#ggsave(file = "/Users/janellemorano/Git/spatial-info-ms/figures/ecological-habitat.png", dpi = 400, width=7, height = 5)
 
 
 ######
@@ -235,7 +243,7 @@ ggplot(by.council, aes(Mgmt.Council, Prop.FishDepOnly, fill = Mgmt.Council)) +
   theme(text = element_text(size = 14)) +
   ylab("Proportion of Species with Fisheries-Dependent Data Only") +
   theme(legend.position="none")
-# save 800x600
+#ggsave(file = "/Users/janellemorano/Git/spatial-info-ms/figures/fisheries-dependent-data.png", dpi = 400, width=7, height = 5)
 
 # Panel B
 ggplot(by.council, aes(Prop.FishDepOnly, Prop.DataPrep, color = Mgmt.Council)) +
@@ -249,7 +257,7 @@ ggplot(by.council, aes(Prop.FishDepOnly, Prop.DataPrep, color = Mgmt.Council)) +
   theme(text = element_text(size = 14)) +
   ylab("Prop. Spatial in Data Preparation") +
   xlab("Prop. Assessments with Fisheries-Dependent Data Only")
-# save 750x500
+#ggsave(file = "/Users/janellemorano/Git/spatial-info-ms/figures/dataprep-fishdepdata.png", dpi = 400, width=7, height = 5)
 
 # Panel C
 ggplot(by.council, aes(Prop.FishDepOnly, Prop.Model, color = Mgmt.Council)) +
@@ -263,7 +271,7 @@ ggplot(by.council, aes(Prop.FishDepOnly, Prop.Model, color = Mgmt.Council)) +
   theme(text = element_text(size = 14)) +
   ylab("Prop. Spatial in Assessment Model") +
   xlab("Prop. Assessments with Fisheries-Dependent Data Only")
-# save 750x500
+#ggsave(file = "/Users/janellemorano/Git/spatial-info-ms/figures/model-fishdepdata.png", dpi = 400, width=7, height = 5)
 
 
 #----- Landings & Value Stats
@@ -322,7 +330,7 @@ ggplot(data = si.national.stack, aes(x = Step, y = Total, fill = Response)) +
   theme(axis.title.x = element_blank()) +
   theme(text = element_text(size = 14)) +
   ggtitle("National")
-
+#ggsave(file = "/Users/janellemorano/Git/spatial-info-ms/figures/national-steps.png", dpi = 400, width=7, height = 5)
 
 #----- Regional Council Trends
 # Category of spatial info use by Regional Council
@@ -379,6 +387,35 @@ for (z in 1:length(unique(names))) {
     theme(legend.position = "none")
   )
 }
+#ggsave(file = "/Users/janellemorano/Git/spatial-info-ms/figures/national-steps.png", dpi = 400, width=7, height = 5)
 
+## Try
+# Graph by Region
+names <- unique(si.council.stack$Mgmt.Council)
+# Create the output folder if it doesn't exist
+output_dir <- "/Users/janellemorano/Git/spatial-info-ms/figures/council_plots"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
+# Loop through each council name, generate the plot, and save it
+for (z in seq_along(names)) {
+  council_name <- names[z]
+  
+  p <- ggplot(data = subset(si.council.stack, Mgmt.Council == council_name),
+              aes(x = Step, y = Total, fill = Response)) +
+    geom_bar(stat = "identity") +
+    scale_fill_manual(values = cols) +
+    theme_classic(base_size = 30) +  # Clean white background
+    theme(
+      axis.text.x = element_blank(),
+      axis.title.x = element_blank(),
+      legend.position = "none"
+    ) +
+    ggtitle(council_name)
+  
+  # Create a safe file name (remove or replace problematic characters)
+  file_safe_name <- gsub("[^[:alnum:]_]", "_", council_name)
+  file_path <- file.path(output_dir, paste0("council_", file_safe_name, ".png"))
+  
+  ggsave(filename = file_path, plot = p, dpi = 400, width = 7, height = 5)
+}
 

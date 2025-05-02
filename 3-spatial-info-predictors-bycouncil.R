@@ -116,8 +116,8 @@ ggplot(by.council, aes(y = Ave.Dollars.Adj_Commercial, x = Mgmt.Council, )) +
 
 #######----- Predicting factors on use of spatial info BY COUNCIL REGION with a Binomial Logistic Regression or Poisson with random intercepts (for Councils)
 # Convert to factors
-sip$Ecological <- as.factor((sip$Ecological))
-sip$Mgmt.Council <- as.factor(sip$Mgmt.Council)
+sic$Ecological <- as.factor((sic$Ecological))
+sic$Mgmt.Council <- as.factor(sic$Mgmt.Council)
 
 # Hypotheses: Factors that drive stock assessments to incorporate spatial info differ for each region...
 
